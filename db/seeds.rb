@@ -106,43 +106,43 @@ w_shoe2 = Product.create(
 )
 
 w_shoe3 = Product.create(
-  name: "Dezmin Mid"
-  description: "This low boot has a sleek, sharp profile that compliments dress looks and elevates jeans."
+  name: "VIVIEN POINT TOE FLAT"
+  description: "A cleanly styled flat features an on-trend pointed toe and a soft, cushioned footbed."
   color: "BLUSH SUEDE"
   preferred_style: "Casual"
   product_type: "Shoe"
   price: 10
-  outfit_gender: "M"
-  brand: "CLARKS"
+  outfit_gender: "W"
+  brand: "BELLA VITA"
   season: "All"
   picture_url: "https://n.nordstrommedia.com/id/sr2/c534f889-0b60-4417-81b7-75d2f8f8542b.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70"
   rating: 4
 )
 
 w_shoe4 = Product.create(
-  name: "Dezmin Mid"
-  description: "This low boot has a sleek, sharp profile that compliments dress looks and elevates jeans."
-  color: "COLA SUEDE"
+  name: "VIVIEN POINT TOE FLAT"
+  description: "A cleanly styled flat features an on-trend pointed toe and a soft, cushioned footbed."
+  color: "BLACK SUEDE"
   preferred_style: "Casual"
   product_type: "Shoe"
   price: 10
-  outfit_gender: "M"
-  brand: "CLARKS"
+  outfit_gender: "W"
+  brand: "BELLA VITA"
   season: "All"
-  picture_url: "https://i.ebayimg.com/images/g/40EAAOSwjg1bx13c/s-l300.jpg"
-  rating: 5
+  picture_url: "https://n.nordstrommedia.com/id/sr2/c534f889-0b60-4417-81b7-75d2f8f8542b.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70"
+  rating: 4
 )
 
 w_shoe5 = Product.create(
-  name: "Dezmin Mid"
-  description: "This low boot has a sleek, sharp profile that compliments dress looks and elevates jeans."
-  color: "COLA SUEDE"
+  name: "POPPY SANDALS"
+  description: "A sling-back sandal in leather with a stacked heel."
+  color: "BLACK"
   preferred_style: "Casual"
   product_type: "Shoe"
   price: 10
-  outfit_gender: "M"
-  brand: "CLARKS"
-  season: "All"
-  picture_url: "https://i.ebayimg.com/images/g/40EAAOSwjg1bx13c/s-l300.jpg"
+  outfit_gender: "W"
+  brand: "TOMS"
+  season: "Spring"
+  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
   rating: 5
 )
