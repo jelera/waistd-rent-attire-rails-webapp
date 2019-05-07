@@ -5,6 +5,73 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+UserOutfit.destroy_all
+Product.destroy_all
+Outfit.destroy_all
+OutfitProduct.destroy_all
+Cart.destroy_all
+CartProduct.destroy_all
+
+user1 = User.create(
+  first_name: "Sonia",
+  last_name: "Dumitru",
+  email: "sonia@gmail.com",
+  password_digest: "waisted",
+  birth_date: Datetime.new(1988, 9, 27),
+  outfit_gender: "F",
+  height: 66,
+  preferred_style: "Casual",
+  favorite_color: "grey",
+  top_size: "S",
+  bottom_size: "S",
+  shoe_size: 8
+)
+
+user2 = User.create(
+  first_name: "Sarah",
+  last_name: "Elzinga",
+  email: "sarah@gmail.com",
+  password_digest: "waisted",
+  birth_date: Datetime.new(1985, 9, 24),
+  outfit_gender: "F",
+  height: 64,
+  preferred_style: "Formal",
+  favorite_color: "red",
+  top_size: "M",
+  bottom_size: "M",
+  shoe_size: 9
+)
+
+user3 = User.create(
+  first_name: "Jose",
+  last_name: "Elera",
+  email: "jose@gmail.com",
+  password_digest: "waisted",
+  birth_date: Datetime.new(1985, 4, 24),
+  outfit_gender: "M",
+  height: 67,
+  preferred_style: "Formal",
+  favorite_color: "blue",
+  top_size: "L",
+  bottom_size: "L",
+  shoe_size: 10
+)
+
+user4 = User.create(
+  first_name: "Rishi",
+  last_name: "Tirumala",
+  email: "rishi@gmail.com",
+  password_digest: "waisted",
+  birth_date: Datetime.new(1990, 5, 27),
+  outfit_gender: "M",
+  height: 67,
+  preferred_style: "Formal",
+  favorite_color: "blue",
+  top_size: "L",
+  bottom_size: "L",
+  shoe_size: 11
+)
 
 casual_pant_w1 = Product.create(
               name: "HIGH-WAISTED BELTED PANTS",
@@ -596,10 +663,11 @@ ties2= Product.create(
 m_shoe1 = Product.create(
   name: "PARK AVENUE CAP-TOE OXFORD",
   description: "Lace-up oxford dress shoe",
+  size: 7,
   color: "BROWN",
   preferred_style: "Formal",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: M,
   brand: "ALLEN EDMONDS",
   season: "All",
@@ -610,10 +678,11 @@ m_shoe1 = Product.create(
 m_shoe2 = Product.create(
   name: "PARK AVENUE CAP-TOE OXFORD",
   description: "Lace-up oxford dress shoe",
+  size: 8,
   color: "BLACK",
   preferred_style: "Formal",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "ALLEN EDMONDS",
   season: "All",
@@ -624,10 +693,11 @@ m_shoe2 = Product.create(
 m_shoe3 = Product.create(
   name: "DAVID CHELSEA BOOT",
   description: "A mid-high ankle boot crafted from smooth leather with tonal side goring and a cushioned rubber sole exudes distinguished mod style on the daily.",
+  size: 10,
   color: "BROWN",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "NORDSTROM",
   season: "All",
@@ -638,10 +708,11 @@ m_shoe3 = Product.create(
 m_shoe4 = Product.create(
   name: "DAVID CHELSEA BOOT",
   description: "A mid-high ankle boot crafted from smooth leather with tonal side goring and a cushioned rubber sole exudes distinguished mod style on the daily.",
+  size: 9,
   color: "BLACK",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "NORDSTROM",
   season: "All",
@@ -652,10 +723,11 @@ m_shoe4 = Product.create(
 m_shoe5 = Product.create(
   name: "Dezmin Mid",
   description: "This low boot has a sleek, sharp profile that compliments dress looks and elevates jeans.",
+  size: 9,
   color: "COLA SUEDE",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "CLARKS",
   season: "All",
@@ -666,10 +738,11 @@ m_shoe5 = Product.create(
 w_shoe1 = Product.create(
   name: "RETSIE PUMP",
   description: "Supple leather graces the silhouette of a poised pointy-toe pump lifted perfectly by a slightly slanted heel.",
+  size: 8,
   color: "BLACK",
   preferred_style: "Formal",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "VINCE CAMUTO",
   season: "All",
@@ -680,10 +753,11 @@ w_shoe1 = Product.create(
 w_shoe2 = Product.create(
   name: "RETSIE PUMP",
   description: "Supple leather graces the silhouette of a poised pointy-toe pump lifted perfectly by a slightly slanted heel.",
+  size: 7,
   color: "SOFT MAUVE",
   preferred_style: "Formal",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "VINCE CAMUTO",
   season: "All",
@@ -694,10 +768,11 @@ w_shoe2 = Product.create(
 w_shoe3 = Product.create(
   name: "VIVIEN POINT TOE FLAT",
   description: "A cleanly styled flat features an on-trend pointed toe and a soft, cushioned footbed.",
+  size: 9,
   color: "BLUSH SUEDE",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "BELLA VITA",
   season: "All",
@@ -708,10 +783,11 @@ w_shoe3 = Product.create(
 w_shoe4 = Product.create(
   name: "VIVIEN POINT TOE FLAT",
   description: "A cleanly styled flat features an on-trend pointed toe and a soft, cushioned footbed.",
+  size: 6,
   color: "BLACK SUEDE",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "BELLA VITA",
   season: "All",
@@ -722,10 +798,11 @@ w_shoe4 = Product.create(
 w_shoe5 = Product.create(
   name: "POPPY SANDALS",
   description: "A sling-back sandal in leather with a stacked heel.",
+  size: 9,
   color: "BLACK",
   preferred_style: "Casual",
   product_type: "Shoes",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "TOMS",
   season: "Spring",
@@ -740,7 +817,7 @@ m_acc1 = Product.create(
   color: "BLACK",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 5,
+  price_cents: 5,
   outfit_gender: "M",
   brand: "BROOKS BROTHERS",
   season: "All",
@@ -754,7 +831,7 @@ m_acc2 = Product.create(
   color: "BROWN",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 5,
+  price_cents: 5,
   outfit_gender: "M",
   brand: "BROOKS BROTHERS",
   season: "All",
@@ -768,7 +845,7 @@ m_acc3 = Product.create(
   color: "BROWN",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "BROOKS BROTHERS",
   season: "All",
@@ -782,7 +859,7 @@ m_acc4 = Product.create(
   color: "BLACK",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "M",
   brand: "CARTIER",
   season: "All",
@@ -796,7 +873,7 @@ m_acc5 = Product.create(
   color: "SILVER",
   preferred_style: "Casual",
   product_type: "Accessories",
-  price: 5,
+  price_cents: 5,
   outfit_gender: "M",
   brand: "SWATCH",
   season: "All",
@@ -810,7 +887,7 @@ w_acc1 = Product.create(
   color: "WHITE GOLD",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "CARTIER",
   season: "All",
@@ -824,7 +901,7 @@ w_acc2 = Product.create(
   color: "STEEL",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "CARTIER",
   season: "All",
@@ -838,7 +915,7 @@ w_acc3 = Product.create(
   color: "BLACK",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "HERMES",
   season: "Spring",
@@ -852,7 +929,7 @@ w_acc4 = Product.create(
   color: "GOLD, WHITE GOLD, ROSE GOLD",
   preferred_style: "Formal",
   product_type: "Accessories",
-  price: 10,
+  price_cents: 10,
   outfit_gender: "W",
   brand: "CARTIER",
   season: "All",
@@ -866,7 +943,7 @@ w_acc5 = Product.create(
   color: "PEBBLED LEATHER",
   preferred_style: "Casual",
   product_type: "Accessories",
-  price: 5,
+  price_cents: 5,
   outfit_gender: "W",
   brand: "CUYANA",
   season: "All",
