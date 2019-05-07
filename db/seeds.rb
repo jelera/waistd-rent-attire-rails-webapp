@@ -219,71 +219,71 @@ m_acc5 = Product.create(
 )
 
 w_acc1 = Product.create(
-  name: "POPPY SANDALS"
-  description: "A sling-back sandal in leather with a stacked heel."
-  color: "BLACK"
-  preferred_style: "Casual"
-  product_type: "Shoe"
+  name: "DIAMANTS LÉGERS EARRINGS XS"
+  description: "Diamants Légers earrings, 18K white gold, each set with a brilliant-cut diamond of 0.04 carats."
+  color: "WHITE GOLD"
+  preferred_style: "Formal"
+  product_type: "Accessories"
   price: 10
   outfit_gender: "W"
-  brand: "TOMS"
-  season: "Spring"
-  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
+  brand: "CARTIER"
+  season: "All"
+  picture_url: "https://www.cartier.com/content/dam/rcq/car/78/92/28/789228.png.scale.314.high.diamants-l%C3%A9gers-earrings-xs-white-gold.jpg"
   rating: 5
 )
 
 w_acc2 = Product.create(
-  name: "POPPY SANDALS"
-  description: "A sling-back sandal in leather with a stacked heel."
-  color: "BLACK"
-  preferred_style: "Casual"
-  product_type: "Shoe"
+  name: "PANTHÈRE DE CARTIER WATCH"
+  description: "Panthère de Cartier watch, medium model, quartz movement. Case in steel, dimensions: 27 mm x 37 mm, thickness: 6 mm, crown set with a synthetic blue spinel, silvered dial, blued-steel sword-shaped hands, steel bracelet. Water-resistant to 3 bar (approx. 30 meters)."
+  color: "STEEL"
+  preferred_style: "Formal"
+  product_type: "Accessories"
   price: 10
   outfit_gender: "W"
-  brand: "TOMS"
-  season: "Spring"
-  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
+  brand: "CARTIER"
+  season: "All"
+  picture_url: "https://www.cartier.com/content/dam/rcq/car/14/37/99/7/1437997.png.scale.314.high.panth%C3%A8re-de-cartier-watch-steel.jpg"
   rating: 5
 )
 
 w_acc3 = Product.create(
-  name: "POPPY SANDALS"
-  description: "A sling-back sandal in leather with a stacked heel."
+  name: "BIRKIN BAG"
+  description: "Noir Togo leather Hermès Birkin 40 with gold-plated hardware, dual rolled top handles, protective feet at base, tonal Chevre lining, dual interior pockets; one with zip closure and belted turn-lock closure at front flap. Includes box, dust bag, clochette, keys and lock. From the 2006 Collection."
   color: "BLACK"
-  preferred_style: "Casual"
-  product_type: "Shoe"
+  preferred_style: "Formal"
+  product_type: "Accessories"
   price: 10
   outfit_gender: "W"
-  brand: "TOMS"
+  brand: "HERMES"
   season: "Spring"
-  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
+  picture_url: "https://product-images.therealreal.com/HER189170_1_enlarged.jpg?width=1500"
   rating: 5
 )
 
 w_acc4 = Product.create(
-  name: "POPPY SANDALS"
-  description: "A sling-back sandal in leather with a stacked heel."
-  color: "BLACK"
-  preferred_style: "Casual"
-  product_type: "Shoe"
+  name: "TRINITY NECKLACE"
+  description: "Panthère de Cartier watch, medium model, quartz movement. Case in steel, dimensions: 27 mm x 37 mm, thickness: 6 mm, crown set with a synthetic blue spinel, silvered dial, blued-steel sword-shaped hands, steel bracelet. Water-resistant to 3 bar (approx. 30 meters)."
+  color: "GOLD, WHITE GOLD, ROSE GOLD"
+  preferred_style: "Formal"
+  product_type: "Accessories"
   price: 10
   outfit_gender: "W"
-  brand: "TOMS"
-  season: "Spring"
-  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
+  brand: "CARTIER"
+  season: "All"
+  picture_url: "https://www.cartier.com/content/dam/rcq/car/14/65/15/8/1465158.png.scale.314.high.trinity-necklace-white-gold-yellow-gold-pink-gold.jpg"
   rating: 5
 )
 
 w_acc5 = Product.create(
-  name: "POPPY SANDALS"
-  description: "A sling-back sandal in leather with a stacked heel."
-  color: "BLACK"
+  name: "CLASSIC LEATHER ZIPPER TOTE"
+  description: "The pebbled leather is genuine Argentinian, both lightweight and seriously soft, yet durable and sized just right for work or a weekend getaway. A marriage of form and function designed to impress - and crafted to last."
+  color: "PEBBLED LEATHER"
   preferred_style: "Casual"
-  product_type: "Shoe"
-  price: 10
+  product_type: "Accessories"
+  price: 5
   outfit_gender: "W"
-  brand: "TOMS"
-  season: "Spring"
-  picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg"
-  rating: 5
+  brand: "CUYANA"
+  season: "All"
+  picture_url: "https://assets3.cuyana.com/media/catalog/product/CLCI/c21hbGxfaW1hZ2U/Xw/Xw/MTAw/MQ/MQ/MQ/MQ/Xw/ZDhiMjA3NDFjNWYyNmYzOGNjYWE0NzIyNDgyMWNjZmU/3/5/352_classiczippertote_lightstone_1_3_.jpg"
+  rating: 4
 )
