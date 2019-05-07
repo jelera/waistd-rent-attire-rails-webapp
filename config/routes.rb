@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :products
   resources :carts
   resources :users
-
+  resources :user_outfits
 end
