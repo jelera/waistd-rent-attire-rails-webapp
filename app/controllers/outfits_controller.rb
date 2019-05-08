@@ -6,7 +6,7 @@ class OutfitsController < ApplicationController
 
   def show
     @outfit = Outfit.find(params[:id])
-    @product = @outfit.products
+    @products = @outfit.products
   end
 
 
