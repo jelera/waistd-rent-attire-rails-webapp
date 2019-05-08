@@ -1,24 +1,28 @@
-<h2> <%= @user.first_name %>'s Profile</h2>
-<h2><%=  @user %></h2>
+
+<h2>User Profile Page for: <%= @user.full_name %></h2>
+<h4>Email: <%=  @user.email %></h4><br>
+<h4>Birthday:<%=  @user.birth_date %></h4><br>
+<h4>Preferred style:><%=  @user.preferred_style %></h4><br>
+<h4>Height:<%=  @user.height %></h4><br>
+<h4>Top size:<%=  @user.top_size %></h4><br>
+<h4>Bottom size:<%=  @user.bottom_size %></h4><br>
+<h4>Shoe size:<%=  @user.shoe_size %></h4><br>
 
 
 
+<% if logged_in? %>
+    <p>Currently logged in as: <%= current_user.full_name %></p>
+  <% else %>
+    <p>Please <%= link_to "Log In", login_path%> to make a rent your selected attire!</p>
+<% end %>
+
+<% if flash[:message] %>
+  <h4><%= flash[:message] %></h4>
+<% end %>
+
+<% if @user_id == current_user.id %>
+  <% button_to "Edit My Profile", edit_user_path(current_user)%>
+<% end %><br><br>
 
 
-create_table "users", force: :cascade do |t|
-  t.string "first_name"
-  t.string "last_name"
-  t.string "email"
-  t.string "password_digest"
-  t.datetime "birth_date"
-  t.string "outfit_gender"
-  t.integer "height"
-  t.string "preferred_style"
-  t.string "favorite_color"
-  t.string "top_size"
-  t.string "bottom_size"
-  t.integer "shoe_size"
-  t.string "picture_url"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-end
+<% button_to "Log Out" , "/logout", method: "delete"%>

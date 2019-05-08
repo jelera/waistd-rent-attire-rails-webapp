@@ -1,5 +1,65 @@
+<div class="row columns">
+    <h1>Our Handpicked Outfits</h1>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-4">
 
-<% @outfits.each do |outfit| %>
-  <li><%= link_to outfit.name, outfit_path(outfit) %></li>
-      <%= image_tag outfit.picture_url %>
-<% end %>
+  <% @outfits.each do |outfit| %>
+    <!-- Card Element-->
+    <div class="column">
+        <a href="<%= outfit_path(outfit) %>">
+            <div class="card" style="min-height: 800px;">
+                <img src="<%= outfit.picture_url %>">
+                <div class="card-section">
+                    <h4><%= outfit.name.titleize %></h4>
+                    <p>
+                        <%= outfit.description %>
+                    </p>
+                    <p class='text-right'>
+                        <strong>$<%= outfit.price %></strong>
+                    </p>
+
+                    <p class='rating-stars' style="color: gold;">
+                    <% if outfit.rating == 5 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    <% elsif outfit.rating == 4 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif outfit.rating == 3 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif outfit.rating == 2 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif outfit.rating == 1 %>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif outfit.rating == 0 %>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% end %>
+                    </p>
+                </div>
+            </div><!-- end .column card-->
+        </a>
+    </div>
+    <% end %>
+</div>
