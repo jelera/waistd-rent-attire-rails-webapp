@@ -24,6 +24,10 @@ class Product < ApplicationRecord
     array
   end
 
+  def self.top_rated
+    self.order('rating').first(5)
+  end
+
 
 
   def price
