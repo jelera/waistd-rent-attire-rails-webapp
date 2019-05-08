@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 UserOutfit.destroy_all
 Product.destroy_all
@@ -18,7 +18,7 @@ user1 = User.create(
   last_name: "Dumitru",
   email: "sonia@gmail.com",
   password_digest: "waisted",
-  birth_date: Datetime.new(1988, 9, 27),
+  birth_date: DateTime.new(1988, 9, 27),
   outfit_gender: "F",
   height: 66,
   preferred_style: "Casual",
@@ -33,7 +33,7 @@ user2 = User.create(
   last_name: "Elzinga",
   email: "sarah@gmail.com",
   password_digest: "waisted",
-  birth_date: Datetime.new(1985, 9, 24),
+  birth_date: DateTime.new(1985, 9, 24),
   outfit_gender: "F",
   height: 64,
   preferred_style: "Formal",
@@ -48,7 +48,7 @@ user3 = User.create(
   last_name: "Elera",
   email: "jose@gmail.com",
   password_digest: "waisted",
-  birth_date: Datetime.new(1985, 4, 24),
+  birth_date: DateTime.new(1985, 4, 24),
   outfit_gender: "M",
   height: 67,
   preferred_style: "Formal",
@@ -59,15 +59,30 @@ user3 = User.create(
 )
 
 user4 = User.create(
+  first_name: "Diana",
+  last_name: "Utan",
+  email: "diana@gmail.com",
+  password_digest: "waisted",
+  birth_date: DateTime.new(1985, 8, 23),
+  outfit_gender: "F",
+  height: 62,
+  preferred_style: "Casual",
+  favorite_color: "black",
+  top_size: "S",
+  bottom_size: "S",
+  shoe_size: 7
+)
+
+user5 = User.create(
   first_name: "Rishi",
   last_name: "Tirumala",
   email: "rishi@gmail.com",
   password_digest: "waisted",
-  birth_date: Datetime.new(1990, 5, 27),
+  birth_date: DateTime.new(1990, 5, 27),
   outfit_gender: "M",
   height: 67,
   preferred_style: "Formal",
-  favorite_color: "blue",
+  favorite_color: "pink",
   top_size: "L",
   bottom_size: "L",
   shoe_size: 11
@@ -535,7 +550,7 @@ formal_shirt_m5 = Product.create(
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/7545/386/403/2/w/1024/7545386403_2_1_1.jpg?ts=1552294695281",
               rating: 5
             )
-
+#navy textured weave suit jacket, same pants, with laq buttons shirt
 outfit_m1 = Outfit.create(
             name: 'TEXTURED WEAVE SUIT',
              description: 'Jacket with pointed lapel collar with long sleeves with buttoned cuffs. Welt pockets at chest and hip. Interior pockets. Double back vent. Front button closure.',
@@ -544,7 +559,7 @@ outfit_m1 = Outfit.create(
              outfit_gender: 'M',
              rating: 5
            )
-
+#textured weave suit jacket same pants, super slim
 outfit_m2 = Outfit.create(
             name: 'TEXTURED SUIT',
             description: 'Jacket with pointed lapel collar with long sleeves with buttoned cuffs. Welt pockets at chest and hip. Interior pockets. Double back vent. Front button closure.',
@@ -554,8 +569,8 @@ outfit_m2 = Outfit.create(
             rating: 5
           )
 
-
-outfit_m2 = Outfit.create(
+#red strech suith w sheen, same pants, travel collection shirt
+outfit_m3 = Outfit.create(
             name: 'STRETCH CHINTZ SUIT',
             description: 'Plain jacket with notched lapels and contrasting buttonhole pin. Two front flap pockets. Chest pocket with contrasting pocket square. Lined. Two interior pockets. Two back vents. Buttoned cuffs. Front button closure.',
             preferred_style: 'Formal',
@@ -564,24 +579,16 @@ outfit_m2 = Outfit.create(
             rating: 5
           )
 
-outfit_m4 = Outfit.create(
-            name: 'STRETCH CHINTZ SUIT',
-            description: 'Plain jacket with notched lapels and contrasting buttonhole pin. Two front flap pockets. Chest pocket with contrasting pocket square. Lined. Two interior pockets. Two back vents. Buttoned cuffs. Front button closure.',
-            preferred_style: 'Formal',
-            picture_url: 'https://static.zara.net/photos///2019/V/T/2/p/1564/310/606/2/w/1024/1564310606_1_1_1.jpg?ts=1550248818917',
-            outfit_gender: 'M',
-            rating: 5
-          )
+# outfit_m4 = Outfit.create(
+#             name: 'STRETCH CHINTZ SUIT',
+#             description: 'Plain jacket with notched lapels and contrasting buttonhole pin. Two front flap pockets. Chest pocket with contrasting pocket square. Lined. Two interior pockets. Two back vents. Buttoned cuffs. Front button closure.',
+#             preferred_style: 'Formal',
+#             picture_url: 'https://static.zara.net/photos///2019/V/T/2/p/1564/310/606/2/w/1024/1564310606_1_1_1.jpg?ts=1550248818917',
+#             outfit_gender: 'M',
+#             rating: 5
+#           )
 
 
-outfit_m4 = Outfit.create(
-            name: 'RUSTIC SUIT',
-            description: 'Jacket made of linen blend fabric. Pointed lapel collar with long sleeves with buttoned cuffs. Welt pockets at chest and hip. Interior pocket. Double back vent. Front button closure.',
-            preferred_style: 'Casual',
-            picture_url: 'https://www.zara.com/us/en/rustic-suit-pT4377512052.html?v1=13875341&v2=1181247',
-            outfit_gender: 'M',
-            rating: 5
-          )
 
 casual_shirt_m1 = Product.create(
             name: "SHORT SLEEVE SWEATER",
@@ -668,7 +675,7 @@ m_shoe1 = Product.create(
   preferred_style: "Formal",
   product_type: "Shoes",
   price_cents: 10,
-  outfit_gender: M,
+  outfit_gender: 'M',
   brand: "ALLEN EDMONDS",
   season: "All",
   picture_url: "https://www.allenedmonds.com/dw/image/v2/AAXI_PRD/on/demandware.static/-/Sites-allenedmonds-catalog/default/dwa321e934/images/2.1/mens-shoes/parkave-2179-coffee-angle-web.jpg?sw=736&sh=736&sm=fit",
@@ -950,3 +957,34 @@ w_acc5 = Product.create(
   picture_url: "https://assets3.cuyana.com/media/catalog/product/CLCI/c21hbGxfaW1hZ2U/Xw/Xw/MTAw/MQ/MQ/MQ/MQ/Xw/ZDhiMjA3NDFjNWYyNmYzOGNjYWE0NzIyNDgyMWNjZmU/3/5/352_classiczippertote_lightstone_1_3_.jpg",
   rating: 4
 )
+
+user_outfit1 = UserOutfit.create(user_id: 1, outfit_id: 2)
+user_outfit2 = UserOutfit.create(user_id: 4, outfit_id: 1)
+user_outfit3 = UserOutfit.create(user_id: 2, outfit_id: 3)
+user_outfit4 = UserOutfit.create(user_id: 3, outfit_id: 5)
+user_outfit5 = UserOutfit.create(user_id: 3, outfit_id: 6)
+user_outfit6 = UserOutfit.create(user_id: 5, outfit_id: 4)
+
+outfit_product1 = OutfitProduct.create(outfit_id: 1, product_id: 1)
+outfit_product2 = OutfitProduct.create(outfit_id: 1, product_id: 2)
+outfit_product2 = OutfitProduct.create(outfit_id: 1, product_id: 3)
+
+outfit_product3 = OutfitProduct.create(outfit_id: 2, product_id: 4)
+outfit_product4 = OutfitProduct.create(outfit_id: 2, product_id: 5)
+outfit_product5 = OutfitProduct.create(outfit_id: 2, product_id: 6)
+
+outfit_product6 = OutfitProduct.create(outfit_id: 3, product_id: 7)
+outfit_product7 = OutfitProduct.create(outfit_id: 3, product_id: 8)
+outfit_product8 = OutfitProduct.create(outfit_id: 3, product_id: 9)
+
+outfit_product9 = OutfitProduct.create(outfit_id: 4, product_id: 16)
+outfit_product10 = OutfitProduct.create(outfit_id: 4, product_id: 17)
+outfit_product11 = OutfitProduct.create(outfit_id: 4, product_id: 18)
+
+outfit_product12 = OutfitProduct.create(outfit_id: 5, product_id: 19)
+outfit_product13 = OutfitProduct.create(outfit_id: 5, product_id: 20)
+outfit_product14 = OutfitProduct.create(outfit_id: 5, product_id: 21)
+
+outfit_product15 = OutfitProduct.create(outfit_id: 6, product_id: 25)
+outfit_product16 = OutfitProduct.create(outfit_id: 6, product_id: 26)
+outfit_product17 = OutfitProduct.create(outfit_id: 6, product_id: 27)

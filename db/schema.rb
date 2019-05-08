@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_233337) do
+ActiveRecord::Schema.define(version: 2019_05_08_011217) do
 
   create_table "cart_products", force: :cascade do |t|
     t.integer "product_id"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_233337) do
   create_table "outfits", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "preffered_style"
+    t.string "preferred_style"
     t.string "picture_url"
     t.string "outfit_gender"
     t.integer "rating"
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 2019_05_07_233337) do
 
   create_table "user_outfits", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "oufit_id"
-    t.index ["oufit_id"], name: "index_user_outfits_on_oufit_id"
+    t.integer "outfit_id"
+    t.index ["outfit_id"], name: "index_user_outfits_on_outfit_id"
     t.index ["user_id"], name: "index_user_outfits_on_user_id"
   end
 
