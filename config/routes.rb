@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   resources :outfits, only: [:index, :show]
   resources :products
   resources :carts
-  resources :users
-  resources :users, except: [:index]
+  resources :users, except: [:new]
   resources :user_outfits
+
+  get '/signup', to: 'users#new', as: 'signup'
+  get '/login', to: 'sessions#new', as: 'login'
 
 end
