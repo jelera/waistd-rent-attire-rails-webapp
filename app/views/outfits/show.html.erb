@@ -1,8 +1,108 @@
-<h1>Outfit: </h1>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => OUTFIT: INFO -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
 
-<h2>Name: <%= @outfit.name %></h2>
-<h3>Description: <%= @outfit.description %></h4>
-<h4>Style: <%= @outfit.preferred_style %></h4>
-<h4>Gender: <%= @outfit.outfit_gender %></h4>
-<h4>Picture: <%= image_tag @outfit.picture_url %></h4>
-<h4>Rating: <%= @outfit.rating %></h4>
+<div class="row columns">
+    <h1><%= @outfit.name.titleize %></h1>
+</div>
+
+<div class="work-feature-block row">
+    <div class="columns medium-7">
+        <img class="work-feature-block-image" src=<%= @outfit.picture_url %> />
+    </div>
+    <div class="columns medium-5">
+        <p>
+            <span class="label"><%= @outfit.outfit_gender %></span>
+        </p>
+        <p class='rating-stars' style="color: gold;">
+          <% if @outfit.rating == 5 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          <% elsif @outfit.rating == 4 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @outfit.rating == 3 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @outfit.rating == 2 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @outfit.rating == 1 %>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @outfit.rating == 0 %>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% end %>
+        </p>
+        <h2 class="work-feature-block-header">Outfit Description</h2>
+        <p>
+          <%= @outfit.description %>
+        </p>
+        <ul style="list-style: none;">
+            <li>Recommended Style: <strong><%= @outfit.preferred_style %></strong>  </li>
+        </ul>
+        <div class="product-details-add-to-cart">
+            <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+            <hr>
+            <p class="price">$<%= @outfit.price %></p>
+            <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
+            <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
+    </div>
+
+</div>
+
+<!----------------------------------------------------------------->
+<!-- OUTFIT: PRODUCTS -->
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<div class="row">
+    <div class="row small-up-2 medium-up-3">
+
+        <h3>Included with this outfit</h3>
+    </div>
+</div>
+<div class="row small-up-2 medium-up-3">
+
+  <% @products.each do |product| %>
+    <!-- Card Element-->
+    <div class="column">
+        <div class="card" style="min-height: 800px;">
+            <img src="<%= product.picture_url %>">
+            <div class="card-section">
+                <h4><%= product.name.titleize %></h4>
+                <p>
+                  <%= product.description %>
+                </p>
+                <p class='text-right'>
+                  <strong>$<%= product.price %></strong>
+                </p>
+            </div>
+        </div>
+    </div><!-- end .column card-->
+
+  <% end %>
+
+</div>
