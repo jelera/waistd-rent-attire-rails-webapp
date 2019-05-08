@@ -1,7 +1,65 @@
-<h1>Products: </h1>
-<ul>
-<% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <li><%= link_to image_tag product.picture_url %></li>
-<% end %>
-</ul>
+<div class="row columns">
+    <h1>Our Products</h1>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-4">
+
+  <% @products.each do |product| %>
+    <!-- Card Element-->
+    <div class="column">
+        <a href="<%= product_path(product) %>">
+            <div class="card" style="min-height: 800px;">
+                <img src="<%= product.picture_url %>">
+                <div class="card-section">
+                    <h4><%= product.name.titleize %></h4>
+                    <p>
+                        <%= product.description %>
+                    </p>
+                    <p class='text-right'>
+                        <strong>$<%= product.price %></strong>
+                    </p>
+
+                    <p class='rating-stars' style="color: gold;">
+                    <% if product.rating == 5 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    <% elsif product.rating == 4 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif product.rating == 3 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif product.rating == 2 %>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif product.rating == 1 %>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% elsif product.rating == 0 %>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    <% end %>
+                    </p>
+                </div>
+            </div><!-- end .column card-->
+        </a>
+    </div>
+    <% end %>
+</div>

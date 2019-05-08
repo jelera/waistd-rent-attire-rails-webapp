@@ -9,6 +9,10 @@ class OutfitsController < ApplicationController
     @products = @outfit.products
   end
 
+  def homepage
+    render :homepage
+  end
+
 
   private
 
