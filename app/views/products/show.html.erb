@@ -1,13 +1,91 @@
-<h1>Product: <h1>
-<h2>Name: <%= @product.name %></h2>
-<h4>Description: <%= @product.description %></h4>
-<h4>Size: <%= @product.size %></h4>
-<h4>Color: <%= @product.color %></h4>
-<h4>Preferred Style: <%= @product.preferred_style %></h4>
-<h4>Product Type: <%= @product.product_type %></h4>
-<h4>Price: <%= @product.price_cents %></h4>
-<h4>Outfit Gender: <%= @product.outfit_gender %></h4>
-<h4>Brand: <%= @product.brand %></h4>
-<h4>Season: <%= @product.season %></h4>
-<h4><%= image_tag @product.picture_url %></h4>
-<h4>Rating: <%= @product.rating %></h4>
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => PRODUCTS: INFO -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<div class="row columns">
+    <h1><%= @product.name.titleize %></h1>
+    <h3><%= @product.brand %></h3>
+</div>
+
+<div class="work-feature-block row">
+    <div class="columns medium-7">
+        <img class="work-feature-block-image" src=<%= @product.picture_url %> />
+    </div>
+    <div class="columns medium-5">
+        <p>
+            <span class="label"><%= @product.outfit_gender %></span>
+            <span class="label"><%= @product.product_type %></span>
+            <span class="label"><%= @product.season %></span>
+        </p>
+        <p class='rating-stars' style="color: gold;">
+          <% if @product.rating == 5 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          <% elsif @product.rating == 4 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @product.rating == 3 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @product.rating == 2 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @product.rating == 1 %>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          <% elsif @product.rating == 0 %>
+          <% end %>
+        </p>
+        <h2 class="work-feature-block-header">Product Description</h2>
+        <p>
+          <%= @product.description %>
+        </p>
+        <h2>Product Details</h2>
+                <%# <h6 class="product-color-title">Colors</h6>
+                <form class="product-option-selection">
+                    <input type="radio" name="radios" value="red" id="radio1" checked>
+                    <label for="radio1" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="blue" id="radio2">
+                    <label for="radio2" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="yellow" id="radio3">
+                    <label for="radio3" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="orange" id="radio4">
+                    <label for="radio4" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="green" id="radio5">
+                    <label for="radio5" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                </form> %>
+        <ul style="list-style: none;">
+            <li>Color: <strong><%= @product.color.titleize  %></strong></li>
+            <li>Size: <strong><%= @product.size %></strong></li>
+            <li>Recommended Style: <strong><%= @product.preferred_style %></strong>  </li>
+            <li>Price: <strong>$<%= @product.price_cents %></strong></li>
+        </ul>
+        <div class="product-details-add-to-cart">
+            <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+            <hr>
+            <p class="price">$<%= @product.price %></p>
+            <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
+            <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
+    </div>
+
+</div>
