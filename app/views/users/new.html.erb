@@ -1,0 +1,60 @@
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+
+<% if @current_user %>
+  <p>Logged in as user: <%= @current_user.full_name %></p>
+<% end %>
+
+<h1>Create Your Account: </h1>
+
+<%= form_for(@user) do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name, placeholder: "First Name"%><br>
+
+<%= f.label :last_name %>
+<%= f.text_field :last_name, placeholder: "Last Name"%><br>
+
+<%= f.label :email %>
+<%= f.text_field :email, placeholder: "Email Address"%><br>
+
+<%= f.label :password%>
+<%= f.password_field :password, placeholder: "Password" %><br>
+
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br>
+
+<%= f.label :birth_date %>
+<%= f.text_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
+
+<%= f.label :outfit_gender %>
+<%= f.select :outfit_gender, ["M", "F"],  {:prompt => 'Select Preferred Gender'}%><br>
+
+<%= f.label :height %>
+<%= f.text_field :height, placeholder: "Inches"%><br>
+
+<%= f.label :preferred_style %>
+<%= f.select :preferred_style, ["Casual", "Formal"], {:prompt => 'Select Preferred Style'}%><br>
+
+<%= f.label :favorite_colors %>
+<%= f.select :favorite_color, ["BLACK", "GREY", "WHITE", "NAVY BLUE", "SAND", "BROWN", "OFF-WHITE", "SEA GREEN", "GREEN", "SKY BLUE", "BLUISH", "BURGUNDY", "PINK", "BLUE", "BURNT ORANGE", "MAROON", "LIGHT YELLOW", "BROWN", "COLA SUEDE", "SOFT MAUVE", "SILVER", "BLACK SUEDE", "WHITE GOLD", "STEEL", "PEBBLED LEATHER" ], {:prompt => 'Select Favorite Color'}%><br>
+
+<%= f.label :top_size %>
+<%= f.select :top_size, ["XS", "S", "M", "L", "XL", "XXL"], {:prompt => 'Select Top Size'}%><br>
+
+<%= f.label :bottom_size %>
+<%= f.select :bottom_size, ["XS", "S", "M", "L", "XL", "XXL"],  {:prompt => 'Select Bottom Size'}%><br>
+
+<%= f.label :shoe_size %>
+<%= f.select :shoe_size, ["6", "7", "8", "9", "10", "11"],  {:prompt => 'Select Shoe Size'}%><br>
+
+<%= f.label :picture_url %>
+<%= f.text_field :picture_url, placeholder: "Upload Picture"%><br>
+
+<%= f.submit %>
+
+<% end %>
