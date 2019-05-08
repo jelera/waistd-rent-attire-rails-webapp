@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Waistd</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
-    <!-- Rails Project-specific -->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-  <!------------------------------------------------------------------------------------------------------------------------->
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+<!------------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------------------------->
 <!-- => HEADER -->
 <!------------------------------------------------------------------------------------------------------------------------->
@@ -103,11 +103,94 @@
     </div>
 </div>
 
-<!-- Body -->
-    <%= yield %>
+<!----------------------------------------------------------------->
+<!-- BREADCRUMBS -->
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<div class="row columns">
 
+<nav aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li class="disabled">Gene Splicing</li>
+        <li>
+            <span class="show-for-sr">Current: </span> Cloning
+        </li>
+    </ul>
+</nav>
+</div>
 
-    <!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => PRODUCTS: INFO -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="work-feature-block row">
+    <div class="columns medium-7">
+        <img class="work-feature-block-image" src="https://placehold.it/600x400" />
+    </div>
+    <div class="columns medium-5">
+        <h2 class="work-feature-block-header">Project Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet. Phasellus
+            pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis est
+            quam. Aenean blandit a urna laoreet tincidunt.</p>
+        <h2>Project Details</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+</div><!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => PRODUCTS: DETAILS -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="row align-right">
+    <div class="product-details column medium-5 center-text-for-small-only">
+        <div class="row">
+            <div class="column small-12 large-6">
+                <h6 class="product-color-title">Colors</h6>
+                <form class="product-option-selection">
+                    <input type="radio" name="radios" value="red" id="radio1" checked>
+                    <label for="radio1" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="blue" id="radio2">
+                    <label for="radio2" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="yellow" id="radio3">
+                    <label for="radio3" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="orange" id="radio4">
+                    <label for="radio4" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="green" id="radio5">
+                    <label for="radio5" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                </form>
+            </div>
+            <div class="column small-12 large-6">
+                <h6 class="product-color-title">Size</h6>
+                <form class="product-option-selection">
+                    <select>
+                        <option value="husker">Small</option>
+                        <option value="starbuck">Medium</option>
+                        <option value="hotdog">Large</option>
+                        <option value="apollo">X-Large</option>
+                        <option value="apollo">XX-Large</option>
+                    </select>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="product-details-add-to-cart">
+            <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+            <hr>
+            <p class="price">$19.99</p>
+            <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
+            <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------>
 <!------------------------------------------------------------------------------------------------------------------>
 <!-- => FOOTER -->
 <!------------------------------------------------------------------------------------------------------------------>
@@ -196,5 +279,6 @@
         </div>
     </div>
 </div>
-  </body>
+<script src="assets/js/app.js"></script>
+</body>
 </html>
