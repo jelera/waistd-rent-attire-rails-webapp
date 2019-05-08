@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   has_many :outfits, through: :outfit_products
   has_many :carts, through: :cart_products
 
+
   def self.find_male
     array = []
     self.all.each do |product|
