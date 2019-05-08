@@ -1,0 +1,5 @@
+
+<% @outfits.each do |outfit| %>
+  <li><%= link_to outfit.name, outfit_path(outfit) %></li>
+      <%= image_tag outfit.picture_url %>
+<% end %>

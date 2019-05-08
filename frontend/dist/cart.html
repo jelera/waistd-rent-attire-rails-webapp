@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Waistd</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
-    <!-- Rails Project-specific -->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-  <!------------------------------------------------------------------------------------------------------------------------->
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+<!------------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------------------------->
 <!-- => HEADER -->
 <!------------------------------------------------------------------------------------------------------------------------->
@@ -103,11 +103,85 @@
     </div>
 </div>
 
-<!-- Body -->
-    <%= yield %>
+<div class="row columns">
+    <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li class="disabled">Gene Splicing</li>
+            <li>
+                <span class="show-for-sr">Current: </span> Cloning
+            </li>
+        </ul>
+    </nav>
+</div>
 
+<div class="row columns">
 
-    <!------------------------------------------------------------------------------------------------------------------>
+<table class="cart-table">
+    <caption>Shopping Cart</caption>
+    <!-- Table Head-->
+    <thead>
+        <tr>
+            <th colspan="2">Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+
+    <!-- Table Body-->
+    <tbody>
+        <tr>
+            <td style="width: 100px;">
+                <img src="https://placehold.it/50x70" alt="">
+            </td>
+            <td>
+                <p class="product-title">
+                    <a href="#">Product 1</a>
+                </p>
+                <p class="product-desc">
+                    Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.
+                </p>
+            </td>
+            <td>
+                $1.99
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                1.99
+            </td>
+            <td>
+<a class="button alert" href="#"><i class="fas fa-trash-alt"></i></a>
+
+            </td>
+        </tr>
+
+    </tbody>
+
+    <!-- Table Footer-->
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <a href="#" class="button"><i class="fas fa-angle-double-left"></i> Continue Shopping</a>
+            </td>
+            <td>
+                <strong>Total: $1.99</strong>
+            </td>
+            <td>
+                <a href="#" class="success button">Checkout <i class="fas fa-angle-double-right"></i></a>
+
+            </td>
+        </tr>
+
+    </tfoot>
+</table>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------------>
 <!------------------------------------------------------------------------------------------------------------------>
 <!-- => FOOTER -->
 <!------------------------------------------------------------------------------------------------------------------>
@@ -196,5 +270,6 @@
         </div>
     </div>
 </div>
-  </body>
+<script src="assets/js/app.js"></script>
+</body>
 </html>
