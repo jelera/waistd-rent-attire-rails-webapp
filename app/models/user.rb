@@ -3,4 +3,5 @@ class User < ApplicationRecord
   has_many :user_outfits
   has_many :outfits, through: :user_outfits
 
+  
 end
