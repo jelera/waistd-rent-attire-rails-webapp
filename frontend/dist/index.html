@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!-- => HEADER -->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+
+<!-- NOTE: This is the off-canvas menu that appears when you click on the hamburger menu on smaller screens. Everything in the `.off-canvas` div belongs in `src/layouts/default.html`. Copy this section into the `default.html` file and remove it from this file.  -->
+<div class="off-canvas ecommerce-header-off-canvas position-left" id="ecommerce-header" data-off-canvas>
+
+    <!-- Close button -->
+    <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <ul class="vertical menu">
+        <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
+        <li class="main-nav-link"><a href="#">Category 2</a></li>
+        <li class="main-nav-link"><a href="why.html">Category 3</a></li>
+        <li class="main-nav-link"><a href="build.html">Category 4</a></li>
+        <li class="main-nav-link"><a href="#">Category 5</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Menu -->
+    <ul class="menu vertical">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Order Status</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">My Account</a></li>
+    </ul>
+
+</div>
+
+<!-- NOTE: This is the header menu that appears at the top of your site. -->
+<div class="off-canvas-content" data-off-canvas-content>
+    <div class="ecommerce-header-top show-for-large">
+        <div class="row align-justify">
+            <div class="ecommerce-header-top-message">
+                Tagline Message Can Display Here
+            </div>
+            <div class="ecommerce-header-top-links">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>  Contact</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>  My Account</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ecommerce-header show-for-large">
+        <div class="row align-justify align-middle">
+            <div class="shrink column">
+                <ul class="vertical medium-horizontal menu">
+                    <li><a href="#"><img class="logo" src="https://placehold.it/160x50"></a></li>
+                    <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
+                    <li class="main-nav-link"><a href="#">Category 2</a></li>
+                    <li class="main-nav-link"><a href="why.html">Category 3</a></li>
+                    <li class="main-nav-link"><a href="build.html">Category 4</a></li>
+                    <li class="main-nav-link"><a href="#">Category 5</a></li>
+                </ul>
+            </div>
+            <div class="shrink column">
+                <ul class="menu">
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button search-button"><i class="fas fa-search"></i>
+</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ecommerce-header-mobile hide-for-large">
+        <div class="ecommerce-header-mobile-left">
+            <button class="menu-icon" type="button" data-toggle="ecommerce-header"></button>
+            <form class="ecommerce-header-search-exandable">
+                <input type="search" placeholder="Search">
+            </form>
+        </div>
+        <div class="ecommerce-header-mobile-center">
+            <a href="#"><img class="logo" src="https://placehold.it/130x30"></a>
+        </div>
+        <div class="ecommerce-header-mobile-right">
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => HERO -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="promo-hero promo-hero-bg-image">
+    <div class="promo-hero-content">
+        <h1 class="promo-hero-title">Promo Headline Will Display Here</h1>
+        <p class="promo-hero-description hide-for-small-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc tortor ante, varius eget lacinia porta, faucibus ut eros. Donec quis dui id felis pharetra fermentum.
+        </p>
+        <div class="promo-hero-ctas">
+            <a href="#" class="promo-section-cta button primary">Shop Now</a>
+            <a href="#" class="promo-section-cta button white-hollow">Learn More</a>
+        </div>
+    </div>
+</div><!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => INDEX: FEATURES SECTION -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<div class="marketing-site-features">
+    <h2 class="marketing-site-features-headline">Yeti Approved Features</h2>
+    <p class="marketing-site-features-subheadline subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        quaerat eos words and phrases.</p>
+    <div class="row">
+        <div class="small-12 medium-3 columns">
+            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+            <h4 class="marketing-site-features-title">Special Snowflake</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+            <i class="fa fa-angellist" aria-hidden="true"></i>
+            <h4 class="marketing-site-features-title">Friendly Forms </h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <h4 class="marketing-site-features-title">Special Snowflake</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+            <i class="fa fa-battery-full" aria-hidden="true"></i>
+            <h4 class="marketing-site-features-title">Lithium Ion</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</div><!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => INDEX: TESTIMONIALS SECTION -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<div class="featured-testimonials-section">
+    <div class="row columns">
+        <h2>Testimonials</h2>
+    </div>
+    <div class="featured-testimonials row">
+        <div class="small-12 medium-6 columns">
+            <div class="testimonial">
+                <img class="profile-pic hide-for-small-only" src="https://unsplash.it/201/?random">
+                <p class="featured-testimonials-quotation">Hide when guests come over instantly break out into full
+                    speed make cat go crazy. Meow mix meow meow cat things and purring. catnip.</p>
+            </div>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <div class="testimonial">
+                <img class="profile-pic hide-for-small-only" src="https://unsplash.it/202/?random">
+                <p class="featured-testimonials-quotation">Hide when guests come over instantly break out into full
+                    speed make cat go crazy. Meow mix meow meow cat things and purring. catnip.</p>
+            </div>
+        </div>
+    </div>
+    <div class="featured-testimonials row">
+        <div class="small-12 medium-6 columns">
+            <div class="testimonial">
+                <img class="profile-pic hide-for-small-only" src="https://unsplash.it/203/?random">
+                <p class="featured-testimonials-quotation">Hide when guests come over instantly break out into full
+                    speed make cat go crazy. Meow mix meow meow cat things and purring. catnip.</p>
+            </div>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <div class="testimonial">
+                <img class="profile-pic hide-for-small-only" src="https://unsplash.it/204/?random">
+                <p class="featured-testimonials-quotation">Hide when guests come over instantly break out into full
+                    speed make cat go crazy. Meow mix meow meow cat things and purring. catnip.</p>
+            </div>
+        </div>
+    </div>
+</div><!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => INDEX: AS FEATURED IN SECTION -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="featured-items">
+    <div class="row align-middle align-justify featured-items-wrapper">
+        <h4 class="featured-items-title">As Featured In:</h4>
+        <div class="featured-items-brands">
+            <img src="https://placehold.it/150x70">
+            <img src="https://placehold.it/125x60">
+            <img src="https://placehold.it/150x70">
+            <img src="https://placehold.it/130x50">
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => FOOTER -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="ecommerce-footer">
+    <div class="ecommerce-footer-links row">
+        <div class="small-12 medium-12 large-6 columns">
+            <div class="row ecommerce-footer-links-block">
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Categories</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                        <li><a href="#">Category 4</a></li>
+                        <li><a href="#">Category 5</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns more-categories">
+                    <ul class="menu vertical">
+                        <li><a href="#">Category 6</a></li>
+                        <li><a href="#">Category 7</a></li>
+                        <li><a href="#">Category 8</a></li>
+                        <li><a href="#">Category 9</a></li>
+                        <li><a href="#">Category 10</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Help</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping &amp; Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="small-12 medium-12 large-6 columns">
+            <div class="row">
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>My Account</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">My Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>About</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Social</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ecommerce-footer-bottom-bar row">
+        <div class="small-12 medium-5 columns">
+            <ul class="bottom-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+        <div class="small-12 medium-2 columns ecommerce-footer-logomark">
+            <img src="https://placehold.it/50x50" />
+        </div>
+        <div class="small-12 medium-5 columns">
+            <div class="bottom-copyright">
+                <span>©2017 Company Name. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

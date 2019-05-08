@@ -1,0 +1,331 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!-- => HEADER -->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+
+<!-- NOTE: This is the off-canvas menu that appears when you click on the hamburger menu on smaller screens. Everything in the `.off-canvas` div belongs in `src/layouts/default.html`. Copy this section into the `default.html` file and remove it from this file.  -->
+<div class="off-canvas ecommerce-header-off-canvas position-left" id="ecommerce-header" data-off-canvas>
+
+    <!-- Close button -->
+    <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <ul class="vertical menu">
+        <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
+        <li class="main-nav-link"><a href="#">Category 2</a></li>
+        <li class="main-nav-link"><a href="why.html">Category 3</a></li>
+        <li class="main-nav-link"><a href="build.html">Category 4</a></li>
+        <li class="main-nav-link"><a href="#">Category 5</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Menu -->
+    <ul class="menu vertical">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Order Status</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">My Account</a></li>
+    </ul>
+
+</div>
+
+<!-- NOTE: This is the header menu that appears at the top of your site. -->
+<div class="off-canvas-content" data-off-canvas-content>
+    <div class="ecommerce-header-top show-for-large">
+        <div class="row align-justify">
+            <div class="ecommerce-header-top-message">
+                Tagline Message Can Display Here
+            </div>
+            <div class="ecommerce-header-top-links">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>  Contact</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>  My Account</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ecommerce-header show-for-large">
+        <div class="row align-justify align-middle">
+            <div class="shrink column">
+                <ul class="vertical medium-horizontal menu">
+                    <li><a href="#"><img class="logo" src="https://placehold.it/160x50"></a></li>
+                    <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
+                    <li class="main-nav-link"><a href="#">Category 2</a></li>
+                    <li class="main-nav-link"><a href="why.html">Category 3</a></li>
+                    <li class="main-nav-link"><a href="build.html">Category 4</a></li>
+                    <li class="main-nav-link"><a href="#">Category 5</a></li>
+                </ul>
+            </div>
+            <div class="shrink column">
+                <ul class="menu">
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button search-button"><i class="fas fa-search"></i>
+</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ecommerce-header-mobile hide-for-large">
+        <div class="ecommerce-header-mobile-left">
+            <button class="menu-icon" type="button" data-toggle="ecommerce-header"></button>
+            <form class="ecommerce-header-search-exandable">
+                <input type="search" placeholder="Search">
+            </form>
+        </div>
+        <div class="ecommerce-header-mobile-center">
+            <a href="#"><img class="logo" src="https://placehold.it/130x30"></a>
+        </div>
+        <div class="ecommerce-header-mobile-right">
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------------------->
+<!-- BREADCRUMBS -->
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<div class="row columns">
+
+    <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li class="disabled">Gene Splicing</li>
+            <li>
+                <span class="show-for-sr">Current: </span> Cloning
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => PRODUCTS: INFO -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="work-feature-block row">
+    <div class="columns medium-7">
+        <img class="work-feature-block-image" src="https://placehold.it/600x400" />
+    </div>
+    <div class="columns medium-5">
+        <h2 class="work-feature-block-header">Project Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet. Phasellus
+            pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis est
+            quam. Aenean blandit a urna laoreet tincidunt.</p>
+        <h2>Project Details</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => PRODUCTS: DETAILS -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="row align-right">
+    <div class="product-details column medium-5 center-text-for-small-only">
+        <div class="row">
+            <div class="column small-12 large-6">
+                <h6 class="product-color-title">Colors</h6>
+                <form class="product-option-selection">
+                    <input type="radio" name="radios" value="red" id="radio1" checked>
+                    <label for="radio1" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="blue" id="radio2">
+                    <label for="radio2" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="yellow" id="radio3">
+                    <label for="radio3" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="orange" id="radio4">
+                    <label for="radio4" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                    <input type="radio" name="radios" value="green" id="radio5">
+                    <label for="radio5" class=" dark-hollow expand"><img src="https://placehold.it/30x30" /></label>
+                </form>
+            </div>
+            <div class="column small-12 large-6">
+                <h6 class="product-color-title">Size</h6>
+                <form class="product-option-selection">
+                    <select>
+                        <option value="husker">Small</option>
+                        <option value="starbuck">Medium</option>
+                        <option value="hotdog">Large</option>
+                        <option value="apollo">X-Large</option>
+                        <option value="apollo">XX-Large</option>
+                    </select>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="product-details-add-to-cart">
+            <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+            <hr>
+            <p class="price">$19.99</p>
+            <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
+            <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
+    </div>
+</div>
+<!----------------------------------------------------------------->
+<!-- OUTFIT: PRODUCTS -->
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<div class="row">
+    <div class="row small-up-2 medium-up-3">
+
+        <h3>Included with this outfit</h3>
+    </div>
+</div>
+<div class="row small-up-2 medium-up-3">
+    <!-- Card Element-->
+    <div class="column">
+        <div class="card">
+            <img src="https://placehold.it/150x200">
+            <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+        </div>
+    </div><!-- end .column card-->
+    <!-- Card Element-->
+    <div class="column">
+        <div class="card">
+            <img src="https://placehold.it/150x200">
+            <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+        </div>
+    </div><!-- end .column card-->
+    <!-- Card Element-->
+    <div class="column">
+        <div class="card">
+            <img src="https://placehold.it/150x200">
+            <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+        </div>
+    </div><!-- end .column card-->
+</div>
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- => FOOTER -->
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<div class="ecommerce-footer">
+    <div class="ecommerce-footer-links row">
+        <div class="small-12 medium-12 large-6 columns">
+            <div class="row ecommerce-footer-links-block">
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Categories</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                        <li><a href="#">Category 4</a></li>
+                        <li><a href="#">Category 5</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns more-categories">
+                    <ul class="menu vertical">
+                        <li><a href="#">Category 6</a></li>
+                        <li><a href="#">Category 7</a></li>
+                        <li><a href="#">Category 8</a></li>
+                        <li><a href="#">Category 9</a></li>
+                        <li><a href="#">Category 10</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Help</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping &amp; Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="small-12 medium-12 large-6 columns">
+            <div class="row">
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>My Account</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">My Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>About</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 medium-4 large-4 columns">
+                    <h5>Social</h5>
+                    <ul class="menu vertical">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ecommerce-footer-bottom-bar row">
+        <div class="small-12 medium-5 columns">
+            <ul class="bottom-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+        <div class="small-12 medium-2 columns ecommerce-footer-logomark">
+            <img src="https://placehold.it/50x50" />
+        </div>
+        <div class="small-12 medium-5 columns">
+            <div class="bottom-copyright">
+                <span>©2017 Company Name. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
