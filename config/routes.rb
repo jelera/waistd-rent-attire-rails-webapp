@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :products
   resources :carts
   resources :users
+  resources :users, except: [:index]
+  resources :user_outfits
+
 end
