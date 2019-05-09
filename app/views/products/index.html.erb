@@ -1,12 +1,15 @@
 <div class="row columns">
-    <h1>Our Products</h1>
+    <h1>Our Handpicked Products</h1>
 </div>
 <div class="row small-up-2 medium-up-3 large-up-4">
 
   <% @products.each do |product| %>
     <!-- Card Element-->
     <div class="column">
+
+        <% if product.in_stock? %>
         <a href="<%= product_path(product) %>">
+        <% end %>
             <div class="card" style="min-height: 800px;">
                 <img src="<%= product.picture_url %>">
                 <div class="card-section">
@@ -15,7 +18,12 @@
                         <%= product.description %>
                     </p>
                     <p class='text-right'>
+                        <% if product.in_stock? %>
                         <strong>$<%= product.price %></strong>
+                        <% else %>
+                        <strong>Out of Stock</strong><br>
+                        <del>$<%= product.price %></del>
+                        <% end %>
                     </p>
 
                     <p class='rating-stars' style="color: gold;">
@@ -59,7 +67,9 @@
                     </p>
                 </div>
             </div><!-- end .column card-->
+        <% if product.in_stock? %>
         </a>
+        <% end %>
     </div>
     <% end %>
 </div>
