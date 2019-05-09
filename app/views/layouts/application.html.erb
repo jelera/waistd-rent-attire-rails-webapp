@@ -27,8 +27,8 @@
     </button>
 
     <ul class="vertical menu">
-        <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
-        <li class="main-nav-link"><a href="#">Category 2</a></li>
+        <li class="main-nav-link"><a href="<%= outfits_path %>">All our outfits</a></li>
+        <li class="main-nav-link"><a href="<%= products_path %>">All our products</a></li>
         <li class="main-nav-link"><a href="why.html">Category 3</a></li>
         <li class="main-nav-link"><a href="build.html">Category 4</a></li>
         <li class="main-nav-link"><a href="#">Category 5</a></li>
@@ -69,6 +69,13 @@
                         </a>
                         <% end %>
                     </li>
+                    <% if logged_in? %>
+                    <li>
+                        <a rel="nofollow" data-method="delete" href="/logout">
+                            <i class="fas fa-sign-out-alt"></i>  Logout
+                        </a>
+                    </li>
+                    <% end %>
                     <li><a href="#" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
@@ -80,8 +87,8 @@
             <div class="shrink column">
                 <ul class="vertical medium-horizontal menu">
                     <li><a href="/"><img class="logo" src="https://placehold.it/160x50"></a></li>
-                    <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
-                    <li class="main-nav-link"><a href="#">Category 2</a></li>
+                    <li class="main-nav-link"><a href="<%= outfits_path %>">All our Outfits</a></li>
+                    <li class="main-nav-link"><a href="<%= products_path%>">All our Products</a></li>
                     <li class="main-nav-link"><a href="why.html">Category 3</a></li>
                     <li class="main-nav-link"><a href="build.html">Category 4</a></li>
                     <li class="main-nav-link"><a href="#">Category 5</a></li>
