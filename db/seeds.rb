@@ -120,7 +120,7 @@ casual_jacket_w1 = Product.create(
 casual_shirt_w1 = Product.create(
               name: "BASIC T-SHIRT",
               description: "Round neck tank with wide straps.",
-              size: 'M',
+              size: 'XXL',
               color: 'BLACK',
               preferred_style: 'Casual',
               product_type: 'Shirt',
@@ -167,12 +167,12 @@ formal_jacket_w2 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/2753/036/711/2/w/560/2753036711_2_6_1.jpg?ts=1553098086578",
-              rating: 5
+              rating: 2
             )
 formal_shirt_w2 = Product.create(
               name: "MANDARIN COLLAR SHIRT",
               description: "Flowy Mandarin collar shirt with V-neck front and long sleeves. Asymmetric hem with side vents. ",
-              size: 'M',
+              size: 'XXL',
               color: 'BROWN',
               preferred_style: 'Formal',
               product_type: 'shirt',
@@ -204,7 +204,7 @@ formal_pant_w3 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/2120/691/800/2/w/1920/2120691800_2_1_1.jpg?ts=1549017683341",
-              rating: 5
+              rating: 3
             )
 formal_jacket_w3 = Product.create(
               name: "BLAZER WITH POCKETS",
@@ -231,7 +231,7 @@ formal_shirt_w3 = Product.create(name: "OVERSIZED BLOUSE WITH SLITS",
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/9479/046/251/2/w/1920/9479046251_2_5_1.jpg?ts=1553278198905",
-              rating: 5)
+              rating: 4)
 outfit_w3 = Outfit.create(
                 name: 'FORMAL BLACK WASTED WITH POCKETS',
                 description: 'Jacket with pointed lapel collar. Welt pockets at chest and two front flap pockets. Interior pocket. Back vents. Front button closure.',
@@ -252,7 +252,7 @@ casual_pant_w4 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/8073/037/044/3/w/1920/8073037044_2_1_1.jpg?ts=1554716829836",
-              rating: 5
+              rating: 2
             )
 casual_jacket_w4 = Product.create(
               name: "BUTTONED BLAZER",
@@ -280,7 +280,7 @@ formal_shirt_w4 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/4886/051/500/2/w/1920/4886051500_2_1_1.jpg?ts=1549626551439",
-              rating: 5)
+              rating: 3)
 casual_pant_w5 = Product.create(
               name: "ZW PREMIUM HIGH WAIST REVOLVE BLACK JEANS",
               description: "High-waisted skinny jeans. Five pockets. Washed effect at seams. Front zipper and metal button closure.",
@@ -321,7 +321,7 @@ casual_shirt_w5 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/1/p/2134/311/403/3/w/1920/2134311403_2_1_1.jpg?ts=1553796935752",
-              rating: 5
+              rating: 4
             )
 
 formal_jacket_m1 = Product.create(
@@ -351,13 +351,13 @@ formal_pant_m1 = Product.create(
               brand: "ZARA",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/5522/606/420/2/w/1024/5522606420_2_2_1.jpg?ts=1556541877289",
-              rating: 5
+              rating: 3
             )
 
 formal_shirt_m1 = Product.create(
               name: "SHIRT WITH LACQUERED BUTTONS",
               description: "Slim fit shirt with button-down collar and cuffed long sleeves. Front lacquered button closure.",
-              size: 'M',
+              size: 'XXL',
               color: 'WHITE',
               preferred_style: 'Formal',
               product_type: 'Shirt',
@@ -381,7 +381,7 @@ formal_jacket_m2= Product.create(
           brand: "CALVIN KLEIN",
           season: 'all',
           picture_url: "https://static.zara.net/photos///2019/V/T/2/p/4424/771/400/2/w/1024/4424771400_2_1_1.jpg?ts=1556296799226",
-          rating: 5
+          rating: 3
         )
 
 formal_pant_m2 = Product.create(
@@ -396,13 +396,13 @@ formal_pant_m2 = Product.create(
               brand: "CALVIN KLEIN",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/4425/771/400/2/w/1024/4425771400_2_1_1.jpg?ts=1556121475007",
-              rating: 5
+              rating: 4
             )
 
 formal_shirt_m2 = Product.create(
               name: "SUPERSLIM SHIRT",
               description: "High stretch shirt with lapel collar and long sleeves with French cuffs. Front button closure.",
-              size: 'M',
+              size: 'XXL',
               color: 'WHITE',
               preferred_style: 'Formal',
               product_type: 'Shirt',
@@ -456,7 +456,7 @@ formal_shirt_m3 = Product.create(
               brand: "HUGO BOSS",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/5445/450/403/2/w/1024/5445450403_2_1_1.jpg?ts=1546877177873",
-              rating: 4
+              rating: 3
             )
 
 formal_jacket_m4 = Product.create(
@@ -486,7 +486,7 @@ formal_pant_m4 = Product.create(
               brand: "HUGO BOSS",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/0706/111/606/2/w/1024/0706111606_2_1_1.jpg?ts=1542726581259",
-              rating: 5
+              rating: 3
             )
 
 formal_shirt_m4 = Product.create(
@@ -517,7 +517,7 @@ formal_jacket_m5 = Product.create(
               brand: "CALVIN KLEIN",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/4372/621/400/2/w/1920/4372621400_2_1_1.jpg?ts=1555087315875",
-              rating: 5
+              rating: 2
             )
 
 
@@ -533,7 +533,7 @@ formal_pant_m5 = Product.create(
               brand: "CALVIN KLEIN",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/4373/621/400/2/w/560/4373621400_2_1_1.jpg?ts=1555064864362",
-              rating: 5
+              rating: 4
             )
 
 
@@ -549,7 +549,7 @@ formal_shirt_m5 = Product.create(
               brand: "HUGO BOSS",
               season: 'all',
               picture_url: "https://static.zara.net/photos///2019/V/0/2/p/7545/386/403/2/w/1024/7545386403_2_1_1.jpg?ts=1552294695281",
-              rating: 5
+              rating: 4
             )
 #navy textured weave suit jacket, same pants, with laq buttons shirt
 outfit_m1 = Outfit.create(
@@ -577,7 +577,7 @@ outfit_m3 = Outfit.create(
             preferred_style: 'Formal',
             picture_url: 'https://static.zara.net/photos///2019/V/T/2/p/1564/310/606/2/w/1024/1564310606_1_1_1.jpg?ts=1550248818917',
             outfit_gender: 'M',
-            rating: 5
+            rating: 3
           )
 
 # outfit_m4 = Outfit.create(
@@ -618,7 +618,7 @@ casual_shirt_m2 = Product.create(
             brand: "ZARA",
             season: 'all',
             picture_url: "https://static.zara.net/photos///2019/V/0/2/p/5894/400/250/2/w/1024/5894400250_2_1_1.jpg?ts=1543571070817",
-            rating: 5
+            rating: 2
           )
 
 casual_shirt_m3 = Product.create(
@@ -725,7 +725,7 @@ m_shoe4 = Product.create(
   brand: "NORDSTROM",
   season: "All",
   picture_url: "https://n.nordstrommedia.com/id/sr2/bbdc35dd-3a59-46da-b225-20a8a9593770.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70",
-  rating: 4
+  rating: 2
 )
 
 m_shoe5 = Product.create(
@@ -755,7 +755,7 @@ w_shoe1 = Product.create(
   brand: "VINCE CAMUTO",
   season: "All",
   picture_url: "https://n.nordstrommedia.com/id/sr2/df127d6c-e443-41a1-aa1e-7a66e959812f.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70",
-  rating: 5
+  rating: 4
 )
 
 w_shoe2 = Product.create(
@@ -785,7 +785,7 @@ w_shoe3 = Product.create(
   brand: "BELLA VITA",
   season: "All",
   picture_url: "https://n.nordstrommedia.com/id/sr2/c534f889-0b60-4417-81b7-75d2f8f8542b.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70",
-  rating: 4
+  rating: 2
 )
 
 w_shoe4 = Product.create(
@@ -815,7 +815,7 @@ w_shoe5 = Product.create(
   brand: "TOMS",
   season: "Spring",
   picture_url: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FEBLAUNCH/10011698-BlackLeatherWomensPoppy-P-1450x1015.jpg",
-  rating: 5
+  rating: 3
 )
 
 
@@ -844,7 +844,7 @@ m_acc2 = Product.create(
   brand: "BROOKS BROTHERS",
   season: "All",
   picture_url: "https://ashleyweston.com/wp-content/uploads/2017/03/Black-and-Brown-Dress-Belt-Ashley-Weston-e1489992565501.png",
-  rating: 5
+  rating: 4
 )
 
 m_acc3 = Product.create(
@@ -900,7 +900,7 @@ w_acc1 = Product.create(
   brand: "CARTIER",
   season: "All",
   picture_url: "https://www.cartier.com/content/dam/rcq/car/78/92/28/789228.png.scale.314.high.diamants-l%C3%A9gers-earrings-xs-white-gold.jpg",
-  rating: 5
+  rating: 2
 )
 
 w_acc2 = Product.create(
@@ -928,7 +928,7 @@ w_acc3 = Product.create(
   brand: "HERMES",
   season: "Spring",
   picture_url: "https://product-images.therealreal.com/HER189170_1_enlarged.jpg?width=1500",
-  rating: 5
+  rating: 4
 )
 
 w_acc4 = Product.create(
@@ -956,7 +956,7 @@ w_acc5 = Product.create(
   brand: "CUYANA",
   season: "All",
   picture_url: "https://assets3.cuyana.com/media/catalog/product/CLCI/c21hbGxfaW1hZ2U/Xw/Xw/MTAw/MQ/MQ/MQ/MQ/Xw/ZDhiMjA3NDFjNWYyNmYzOGNjYWE0NzIyNDgyMWNjZmU/3/5/352_classiczippertote_lightstone_1_3_.jpg",
-  rating: 4
+  rating: 3
 )
 
 user_outfit1 = UserOutfit.create(user_id: 1, outfit_id: 2)
