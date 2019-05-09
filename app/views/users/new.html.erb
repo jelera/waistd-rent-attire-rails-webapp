@@ -1,24 +1,40 @@
-
 <% if @errors %>
-  <% @errors.each do |error| %>
-    <%= error %>
-  <% end %>
-<% end %>
-
-
-<% if @current_user %>
-  <p>Logged in as user: <%= @current_user.full_name %></p>
-<% end %>
-
-
-
-<div class="row columns">
-  <h1>Create a new profile</h1>
+<!-------------------->
+<!-- Error Messages -->
+<!-------------------->
+<div class="row align-center">
+  <div class="column medium-6">
+  <style>
+    .field_with_errors label {
+      font-weight: bold;
+      color: red;
+      font-size: 1.03rem;
+    }
+    .field_with_errors input {
+      border: red solid 1px;
+    }
+    .field_with_errors label::before {
+      content: '* ';
+    }
+  </style>
+    <div class="callout alert">
+      <h5>There were errors in the form</h5>
+      <ul>
+      <% @errors.each do |error| %>
+        <li>
+          <%= error %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
+<% end %>
 
-<div class="row">
+<div class="row align-center">
 
-    <div class="column medium-4 medium-offset-4">
+    <div class="column medium-6">
+        <h1 class='text-center'>Create a new profile</h1>
         <div class="profile-image text-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="">
         </div>
@@ -52,7 +68,7 @@
 
             <p>
               <%= f.label :birth_date %>
-              <%= f.text_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
+              <%= f.date_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
             </p>
 
             <p>
@@ -91,7 +107,7 @@
             </p>
 
             <p class='text-center'>
-              <%= f.submit 'Start a W/\ISTED account', :class => 'success button' %>
+              <%= f.submit 'Get W/\ISTED', :class => 'large success button' %>
             </p>
           <% end %>
         </div>
