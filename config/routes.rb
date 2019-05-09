@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   resources :carts
   resources :users, except: [:new]
   resources :user_outfits
+  resources :sessions, only: [:create]
 
   get '/signup', to: 'users#new', as: 'signup'
   get '/login', to: 'sessions#new', as: 'login'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
 
 end
