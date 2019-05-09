@@ -1,12 +1,12 @@
 
 <h2>User Profile Page for: <%= @user.full_name %></h2>
 <h4>Email: <%=  @user.email %></h4><br>
-<h4>Birthday:<%=  @user.birth_date %></h4><br>
-<h4>Preferred style:><%=  @user.preferred_style %></h4><br>
-<h4>Height:<%=  @user.height %></h4><br>
-<h4>Top size:<%=  @user.top_size %></h4><br>
-<h4>Bottom size:<%=  @user.bottom_size %></h4><br>
-<h4>Shoe size:<%=  @user.shoe_size %></h4><br>
+<h4>Birthday: <%=  @user.birth_date %></h4><br>
+<h4>Preferred style: <%=  @user.preferred_style %></h4><br>
+<h4>Height: <%=  @user.height %></h4><br>
+<h4>Top size: <%=  @user.top_size %></h4><br>
+<h4>Bottom size: <%=  @user.bottom_size %></h4><br>
+<h4>Shoe size: <%=  @user.shoe_size %></h4><br>
 
 
 
@@ -22,7 +22,7 @@
 
 <% if @user_id == current_user.id %>
   <% button_to "Edit My Profile", edit_user_path(current_user)%>
-<% end %><br><br>
+<% end %><br>
 
 
-<% button_to "Log Out" , "/logout", method: "delete"%>
+<%= button_to "Log Out" , "/logout", method: "delete"%>
