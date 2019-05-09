@@ -11,7 +11,7 @@
 
 
 <% if logged_in? %>
-    <p>Currently logged in as: <%= current_user.full_name %></p>
+    <p>Currently logged in as: <%= current_user %></p>
   <% else %>
     <p>Please <%= link_to "Log In", login_path%> to make a rent your selected attire!</p>
 <% end %>
@@ -25,4 +25,4 @@
 <% end %><br><br>
 
 
-<% button_to "Log Out" , "/logout", method: "delete"%>
+<%= button_to "Log Out" , "/logout", method: "delete" %>

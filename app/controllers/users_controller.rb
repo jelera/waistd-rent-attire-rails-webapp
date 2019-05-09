@@ -28,8 +28,8 @@ end
 
 def edit
   if find_user
-    if @user.id != @current_user.id
-      redirect_to user_path(@current_user)
+    if @user.id != current_user.id
+      redirect_to user_path(current_user)
     end
   else
     flash[:message] = "That user does not exist!"
