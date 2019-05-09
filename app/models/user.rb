@@ -11,5 +11,14 @@ class User < ApplicationRecord
     self.first_name + " " + self.last_name
   end
 
+  def birthday
+    self.birth_date.to_formatted_s(:long_ordinal)[0..-13]
+  end
+
+  def height_to_ft
+    divmod_output = self.height.divmod(12)
+    "#{divmod_output[0]} ft, #{divmod_output[1]} in"
+  end
+
 
 end
