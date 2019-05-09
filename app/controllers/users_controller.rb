@@ -27,6 +27,10 @@ def create
    end
 end
 
+def show
+  @outfits = @user.outfits
+end
+
 
 def edit
   if find_user
@@ -39,7 +43,6 @@ def edit
   end
 end
 
-end
 
 def update
   @user.update(user_params)
@@ -54,7 +57,7 @@ end
 def destroy
    @user = User.find(params[:id])
    @user.delete
-   redirect_to root_path #we don't have root path yet
+   redirect_to root_path 
 end
 
 private
@@ -80,4 +83,6 @@ end
 
 def find_user
   @user = User.find(params[:id])
+end
+
 end
