@@ -87,7 +87,10 @@
         <div class="row align-justify align-middle">
             <div class="shrink column">
                 <ul class="vertical medium-horizontal menu">
-                    <li><a href="/"><img class="logo" src="https://placehold.it/160x50"></a></li>
+                    <li><a href="/">
+                      <!-- <img class="logo" src="../../assets/waistd_logo.png"> -->
+                      <%= image_tag("waistd_logo.png", size: "100x100", alt: "logo") %>
+                    </a></li>
                     <li class="main-nav-link"><a href="<%= outfits_path %>">All our Outfits</a></li>
                     <li class="main-nav-link"><a href="<%= products_path%>">All our Products</a></li>
                     <li class="main-nav-link"><a href="why.html">Category 3</a></li>
