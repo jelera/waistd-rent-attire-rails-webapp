@@ -36,9 +36,15 @@
     </div>
     <div class="columns medium-5">
         <p>
-            <span class="label"><%= @product.outfit_gender %></span>
-            <span class="label"><%= @product.product_type %></span>
-            <span class="label"><%= @product.season %></span>
+            <span class="button">
+            <% if @product.outfit_gender == "M" %>
+              <i class="fas fa-male"></i>
+            <% else %>
+              <i class="fas fa-female"></i>
+            <% end %>
+            </span>
+            <span class="button"><%= @product.product_type %></span>
+            <span class="button"><%= @product.season %></span>
         </p>
         <p class='rating-stars' style="color: gold;">
           <% if @product.rating == 5 %>
@@ -103,11 +109,22 @@
             <li>Recommended Style: <strong><%= @product.preferred_style %></strong>  </li>
         </ul>
         <div class="product-details-add-to-cart">
-            <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+            <p>
+              <% if @product.in_stock? %>
+                <span class="in-stock">In Stock</span> 
+                <% if @product.stock_quantity < 10 %>
+                  <span class="dim-text">(Only <%= @product.stock_quantity %> left in Stock)</span>
+                <% end %>
+              <% else%>
+                <span class="out-stock"><strong>Out of Stock</strong></span> 
+              <% end %>
+            </p>
+            <% if @product.in_stock? %>
             <hr>
             <p class="price">$<%= @product.price %></p>
             <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
             <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            <% end %>
         </div>
         <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
     </div>
