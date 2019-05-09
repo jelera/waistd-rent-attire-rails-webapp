@@ -28,4 +28,12 @@ class Product < ApplicationRecord
   def price
     '%.2f' % self.price_cents
   end
+
+  def in_stock?
+    unless self.stock_quantity.nil? || self.stock_quantity == 0
+      true
+    else
+      false
+    end
+  end
 end
