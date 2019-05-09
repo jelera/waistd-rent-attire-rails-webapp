@@ -10,7 +10,11 @@ class OutfitsController < ApplicationController
   end
 
   def homepage
-    render :homepage
+    if logged_in?
+      redirect_to outfits_path
+    else
+      render :homepage
+    end
   end
 
 
