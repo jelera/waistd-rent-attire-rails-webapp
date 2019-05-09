@@ -1,4 +1,3 @@
-
 <% if @errors %>
   <% @errors.each do |error| %>
     <%= error %>
@@ -58,3 +57,42 @@
 <%= f.submit %>
 
 <% end %>
+
+<div class="row columns">
+</div>
+
+<div class="row">
+
+    <div class="column medium-4 medium-offset-4">
+        <h1 class='text-center'>My Profile</h1>
+
+        <div class="profile-image text-center">
+            <img src="https://placehold.it/200x200" alt="">
+        </div>
+        <div class="profile-img-upload">
+            <form action="">
+            <p>
+                <label for="">Upload a different photo</label>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">First Name</label>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">Last Name</label>
+                <input type="text" name="" id="">
+            </p>
+            <p class="text-center">
+                <button type="button" class="success large button"><i class="fas fa-check-circle"></i> Save Changes</button>
+                <button type="button" class="hollow secondary button"><i class="fas fa-undo-alt"></i> Clear</button>
+            </p>
+
+            </form>
+            <p>
+
+            </p>
+        </div>
+    </div>
+
+</div>
