@@ -1,16 +1,15 @@
 <!-------------------->
-<!-- Login Messages -->
+<!-- FLASH Messages -->
 <!-------------------->
 <div class="row align-center">
   <div class="column medium-6">
     <% if logged_in? %>
-    <div class="callout success">
-          <h5>Successfull Login</h5>
           <% if flash[:message] %>
-            <h4><%= flash[:message] %></h4>
+            <div class="callout success">
+              <h5>Successfull Login</h5>
+              <h4><%= flash[:message] %></h4>
+            </div>
           <% end %>
-          <p>Currently logged in as: <%= current_user.full_name %></p>
-    </div>
     <% else %>
     <div class="callout alert">
       <% if flash[:message] %>
@@ -24,6 +23,7 @@
 
 <div class="row align-center">
   <div class="columns medium-8">
+    <h1>My Profile</h1>
     <div class="row">
       <div class="columns medium-6">
       <img src="<%= @user.picture_url %>" alt="">
