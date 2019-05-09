@@ -24,7 +24,7 @@
 
 <%= button_to "Log Out", "/logout", method: "delete" %>
 
-<% end %>
+
 <div class="row columns">
   <h1>Create a new profile</h1>
 </div>
@@ -41,7 +41,7 @@
               <%= f.label "Show us your pearly whites" %>
               <%= f.text_field :picture_url, placeholder: "Upload Picture"%>
             </p>
-        
+
             <p>
               <%= f.label :first_name %>
               <%= f.text_field :first_name, placeholder: "First Name"%>

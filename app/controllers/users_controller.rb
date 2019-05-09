@@ -6,6 +6,7 @@ before_action :find_user, only: [:show, :edit, :update]
 # end
 
 def show
+  
 end
 
 def new
