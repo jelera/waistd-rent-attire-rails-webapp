@@ -35,6 +35,16 @@
         <p>
             <span class="label"><%= @outfit.outfit_gender %></span>
         </p>
+
+        <p>
+        <% if current_user.outfits.include? @outfit %>
+          <i class="fas fa-heart" style="color:red;"></i> <%= link_to "Remove to My Outfits", remove_from_my_outfits_path, method: :delete, style: "color: red;"		%>
+        <% else %>
+          <i class="far fa-heart" style="color:red;"></i> <%= link_to "Add to My Outfits", add_to_my_outfits_path, method: :post	, style: "color: red;"		%>
+        <% end %>
+        </p>
+
+
         <p class='rating-stars' style="color: gold;">
           <% if @outfit.rating == 5 %>
             <i class="fas fa-star"></i>
