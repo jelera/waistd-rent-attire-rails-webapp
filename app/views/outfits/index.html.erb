@@ -1,5 +1,10 @@
 <div class="row columns">
-    <h1>Our Handpicked Outfits</h1>
+    <% if logged_in? %>
+        <h1>Hi <%= current_user.first_name %></h1>
+        <h2>Here are some outfit picks for you!</h2>
+    <% else %>
+        <h1>Our Curated Outfits</h1>
+    <% end%>
 </div>
 <div class="row small-up-2 medium-up-3 large-up-4">
 
