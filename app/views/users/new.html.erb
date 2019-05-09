@@ -10,21 +10,8 @@
   <p>Logged in as user: <%= @current_user.full_name %></p>
 <% end %>
 
-<h1>Create Your Account: </h1>
-
-<%= form_for(@user) do |f| %>
-<%= f.label :first_name %>
-<%= f.text_field :first_name, placeholder: "First Name"%><br>
 
 
-
-
-
-<% end %><br>
-
-<%= button_to "Log Out", "/logout", method: "delete" %>
-
-<% end %>
 <div class="row columns">
   <h1>Create a new profile</h1>
 </div>
@@ -58,34 +45,54 @@
               <%= f.label :password%>
               <%= f.password_field :password, placeholder: "Password" %>
             </p>
+            <p>
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br>
+            </p>
 
+            <p>
               <%= f.label :birth_date %>
               <%= f.text_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
+            </p>
 
+            <p>
               <%= f.label :outfit_gender %>
               <%= f.select :outfit_gender, ["M", "F"],  {:prompt => 'Select Preferred Gender'}%><br>
+            </p>
 
+            <p>
               <%= f.label :height %>
               <%= f.text_field :height, placeholder: "Inches"%><br>
+            </p>
 
+            <p>
               <%= f.label :preferred_style %>
               <%= f.select :preferred_style, ["Casual", "Formal"], {:prompt => 'Select Preferred Style'}%><br>
+            </p>
 
+            <p>
               <%= f.label :favorite_colors %>
               <%= f.select :favorite_color, ["BLACK", "GREY", "WHITE", "NAVY BLUE", "SAND", "BROWN", "OFF-WHITE", "SEA GREEN", "GREEN", "SKY BLUE", "BLUISH", "BURGUNDY", "PINK", "BLUE", "BURNT ORANGE", "MAROON", "LIGHT YELLOW", "BROWN", "COLA SUEDE", "SOFT MAUVE", "SILVER", "BLACK SUEDE", "WHITE GOLD", "STEEL", "PEBBLED LEATHER" ], {:prompt => 'Select Favorite Color'}%><br>
+            </p>
 
+            <p>
               <%= f.label :top_size %>
               <%= f.select :top_size, ["XS", "S", "M", "L", "XL", "XXL"], {:prompt => 'Select Top Size'}%><br>
+            </p>
 
+            <p>
               <%= f.label :bottom_size %>
               <%= f.select :bottom_size, ["XS", "S", "M", "L", "XL", "XXL"],  {:prompt => 'Select Bottom Size'}%><br>
+            </p>
 
+            <p>
               <%= f.label :shoe_size %>
               <%= f.select :shoe_size, ["6", "7", "8", "9", "10", "11"],  {:prompt => 'Select Shoe Size'}%><br>
+            </p>
 
-            <%= f.submit %>
+            <p class='text-center'>
+              <%= f.submit 'Start a W/\ISTED account', :class => 'success button' %>
+            </p>
           <% end %>
         </div>
     </div>
