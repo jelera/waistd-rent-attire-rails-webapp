@@ -2,10 +2,12 @@ class UsersController < ApplicationController
 
 before_action :find_user, only: [:show, :edit, :update]
 
-# def index
-# end
-
-def show
+def index
+  if @current_user
+    redirect_to user_path(@current_user)
+  else
+    redirect_to login_path
+  end
 end
 
 def new
