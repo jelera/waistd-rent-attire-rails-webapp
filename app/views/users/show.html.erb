@@ -1,32 +1,108 @@
+<!-------------------->
+<!-- Login Messages -->
+<!-------------------->
+<div class="row align-center">
+  <div class="column medium-6">
+    <% if logged_in? %>
+    <div class="callout success">
+          <h5>Successfull Login</h5>
+          <% if flash[:message] %>
+            <h4><%= flash[:message] %></h4>
+          <% end %>
+          <p>Currently logged in as: <%= current_user.full_name %></p>
+    </div>
+    <% else %>
+    <div class="callout alert">
+      <% if flash[:message] %>
+        <h4><%= flash[:message] %></h4>
+      <% end %>
+      <p>Please <%= link_to "Login to your profile", login_path %> to make a rent your selected attire!</p>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<h2>User Profile Page for: <%= @user.full_name %></h2>
-<h4>Email: <%=  @user.email %></h4><br>
-<h4>Birthday: <%=  @user.birth_date %></h4><br>
-<h4>Preferred style: <%=  @user.preferred_style %></h4><br>
-<h4>Height: <%=  @user.height %></h4><br>
-<h4>Top size: <%=  @user.top_size %></h4><br>
-<h4>Bottom size: <%=  @user.bottom_size %></h4><br>
-<h4>Shoe size: <%=  @user.shoe_size %></h4><br>
+<div class="row align-center">
+  <div class="columns medium-8">
+    <div class="row">
+      <div class="columns medium-6">
+      <img src="<%= @user.picture_url %>" alt="">
+      </div>
+      <div class="columns medium-6">
+        <h2><%= @user.full_name %></h2>
+        <p>
+          Birthday: <%= @user.birthday %>
+        </p>
+    <p>
+      Email: <%= @user.email %> 
+    </p>
+    <p>
+      Preferred Style: <%=  @user.preferred_style %>
+    </p>
+    <p>
+      Height: <%=  @user.height_to_ft %> 
+    </p>
+    <div class="row">
+      <div class="columns medium-4">
+        <p>
+          Top Size: <%=  @user.top_size %>
+        </p>
+      </div>
+      <div class="columns medium-4">
+        <p>
+          Bottom Size: <%=  @user.bottom_size %>
+        </p>
+      </div>
+      <div class="columns medium-4">
+        <p>
+          Shoe Size: <%=  @user.shoe_size %>
+        </p>
+      </div>
+
+    </div>
+      </div>
+    
+    </div>
+    <div class="text-center">
+      <% if @user.id == current_user.id %>
+        <%= link_to "Edit My Profile", edit_user_path(current_user), class: "success button" %>
+      <% end %>
 
 
+      <%= link_to "Log Out" , "/logout", method: "delete", class: "alert button" %>
+    </div>
+  </div>
+</div>
 
-<% if logged_in? %>
-    <p>Currently logged in as: <%= current_user %></p>
-  <% else %>
-    <p>Please <%= link_to "Log In", login_path%> to make a rent your selected attire!</p>
+<% unless @user.outfits.empty? %>
+<div class="row">
+  <div class="columns medium-10">
+    <h2>My Outfits</h2>
+
+  </div>
+</div>
+<div class="row small-up-2 medium-up-3">
+
+  <% @outfits.each do |outfit| %>
+  <!-- Card Element-->
+  <div class="column">
+    <a href="<%= outfit_path(outfit)  %>">
+      <div class="card" style="min-height: 800px;">
+        <img src="<%= outfit.picture_url %>">
+        <div class="card-section">
+          <h4><%= outfit.name.titleize %></h4>
+          <p>
+            <%= outfit.description %>
+          </p>
+          <p class='text-right'>
+            <strong>$<%= outfit.price %></strong>
+          </p>
+        </div>
+      </div>
+    </a>
+  </div><!-- end .column card-->
+
+  <% end %>
 <% end %>
 
-<% if flash[:message] %>
-  <h4><%= flash[:message] %></h4>
-<% end %>
 
-<% if @user_id == current_user.id %>
-  <% button_to "Edit My Profile", edit_user_path(current_user)%>
-<% end %><br>
-
-
-<<<<<<< HEAD
-<%= button_to "Log Out" , "/logout", method: "delete" %>
-=======
-<%= button_to "Log Out" , "/logout", method: "delete"%>
->>>>>>> e3928c4a8b9d64fe4bdeaaafa6d4f1ac2d49d573
