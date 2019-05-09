@@ -1,5 +1,5 @@
-
 <% if @errors %>
+
   <% @errors.each do |error| %>
     <%= error %>
   <% end %>
@@ -27,11 +27,44 @@
 
 <div class="row columns">
   <h1>Create a new profile</h1>
+=======
+<!-------------------->
+<!-- Error Messages -->
+<!-------------------->
+<div class="row align-center">
+  <div class="column medium-6">
+  <style>
+    .field_with_errors label {
+      font-weight: bold;
+      color: red;
+      font-size: 1.03rem;
+    }
+    .field_with_errors input {
+      border: red solid 1px;
+    }
+    .field_with_errors label::before {
+      content: '* ';
+    }
+  </style>
+    <div class="callout alert">
+      <h5>There were errors in the form</h5>
+      <ul>
+      <% @errors.each do |error| %>
+        <li>
+          <%= error %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+
 </div>
+<% end %>
 
-<div class="row">
+<div class="row align-center">
 
-    <div class="column medium-4 medium-offset-4">
+    <div class="column medium-6">
+        <h1 class='text-center'>Create a new profile</h1>
         <div class="profile-image text-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="">
         </div>
@@ -58,34 +91,54 @@
               <%= f.label :password%>
               <%= f.password_field :password, placeholder: "Password" %>
             </p>
+            <p>
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br>
+            </p>
 
+            <p>
               <%= f.label :birth_date %>
-              <%= f.text_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
+              <%= f.date_field :birth_date, placeholder: "Birth Date(yyyy/m/dd)"%><br>
+            </p>
 
+            <p>
               <%= f.label :outfit_gender %>
               <%= f.select :outfit_gender, ["M", "F"],  {:prompt => 'Select Preferred Gender'}%><br>
+            </p>
 
+            <p>
               <%= f.label :height %>
               <%= f.text_field :height, placeholder: "Inches"%><br>
+            </p>
 
+            <p>
               <%= f.label :preferred_style %>
               <%= f.select :preferred_style, ["Casual", "Formal"], {:prompt => 'Select Preferred Style'}%><br>
+            </p>
 
+            <p>
               <%= f.label :favorite_colors %>
               <%= f.select :favorite_color, ["BLACK", "GREY", "WHITE", "NAVY BLUE", "SAND", "BROWN", "OFF-WHITE", "SEA GREEN", "GREEN", "SKY BLUE", "BLUISH", "BURGUNDY", "PINK", "BLUE", "BURNT ORANGE", "MAROON", "LIGHT YELLOW", "BROWN", "COLA SUEDE", "SOFT MAUVE", "SILVER", "BLACK SUEDE", "WHITE GOLD", "STEEL", "PEBBLED LEATHER" ], {:prompt => 'Select Favorite Color'}%><br>
+            </p>
 
+            <p>
               <%= f.label :top_size %>
               <%= f.select :top_size, ["XS", "S", "M", "L", "XL", "XXL"], {:prompt => 'Select Top Size'}%><br>
+            </p>
 
+            <p>
               <%= f.label :bottom_size %>
               <%= f.select :bottom_size, ["XS", "S", "M", "L", "XL", "XXL"],  {:prompt => 'Select Bottom Size'}%><br>
+            </p>
 
+            <p>
               <%= f.label :shoe_size %>
               <%= f.select :shoe_size, ["6", "7", "8", "9", "10", "11"],  {:prompt => 'Select Shoe Size'}%><br>
+            </p>
 
-            <%= f.submit %>
+            <p class='text-center'>
+              <%= f.submit 'Get W/\ISTED', :class => 'large success button' %>
+            </p>
           <% end %>
         </div>
     </div>

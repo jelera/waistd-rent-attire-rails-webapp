@@ -51,14 +51,24 @@
     <div class="ecommerce-header-top show-for-large">
         <div class="row align-justify">
             <div class="ecommerce-header-top-message">
-                Tagline Message Can Display Here
+                Where your dreams come true!
             </div>
             <div class="ecommerce-header-top-links">
                 <ul>
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Order Status</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i>  Contact</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i>  My Account</a></li>
+                    <li>
+                        <% if logged_in? %>
+                        <a href="/my_profile">
+                            <i class="fas fa-user"></i>  My Account
+                        </a>
+                        <% else %>
+                        <a href="/login">
+                            <i class="fas fa-sign-in-alt"></i>  Login
+                        </a>
+                        <% end %>
+                    </li>
                     <li><a href="#" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
@@ -69,7 +79,7 @@
         <div class="row align-justify align-middle">
             <div class="shrink column">
                 <ul class="vertical medium-horizontal menu">
-                    <li><a href="#"><img class="logo" src="https://placehold.it/160x50"></a></li>
+                    <li><a href="/"><img class="logo" src="https://placehold.it/160x50"></a></li>
                     <li class="main-nav-link"><a href="categories.html">Category 1</a></li>
                     <li class="main-nav-link"><a href="#">Category 2</a></li>
                     <li class="main-nav-link"><a href="why.html">Category 3</a></li>
