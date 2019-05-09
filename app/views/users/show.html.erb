@@ -66,17 +66,8 @@
     <div class="text-center">
       <% if @user.id == current_user.id %>
         <%= link_to "Edit My Profile", edit_user_path(current_user), class: "success button" %>
+        <%= link_to "Log Out" , "/logout", method: "delete", class: "alert button" %>
       <% end %>
-
-
-
-<% if logged_in? %>
-    <p>Currently logged in as: <%= @user.first_name %></p>
-  <% else %>
-    <p>Please <%= link_to "Log In", login_path%> to make a rent your selected attire!</p>
-<% end %>
-
-      <%= link_to "Log Out" , "/logout", method: "delete", class: "alert button" %>
     </div>
   </div>
 </div>
@@ -112,10 +103,3 @@
 
   <% end %>
 <% end %>
-
-
-<<<<<<< HEAD
-
-<%= button_to "Log Out" , "/logout", method: "delete" %>
-=======
->>>>>>> 2f50a31fec435b637161e66b06a61243d338ab21

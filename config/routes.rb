@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create]
 
   get '/signup', to: 'users#new', as: 'signup'
-  get '/my_profile', to: 'users#show', as: 'my_profile'
+  # get '/my_profile', to: 'users#my_profile', as: 'my_profile'
   get '/login', to: 'sessions#new', as: 'login'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 

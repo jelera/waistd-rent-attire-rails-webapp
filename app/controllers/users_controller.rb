@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-before_action :find_user, only: [:show, :edit, :update]
+before_action :find_user, only: [:show, :edit, :update, :my_profile]
 
 def index
   if @current_user
@@ -25,6 +25,10 @@ def create
      @errors = @user.errors.full_messages
      render :new
    end
+end
+
+def my_profile
+  redirect_to user_path(@user)
 end
 
 def show
