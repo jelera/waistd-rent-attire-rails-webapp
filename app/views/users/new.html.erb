@@ -1,4 +1,33 @@
 <% if @errors %>
+
+  <% @errors.each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+
+<% if @current_user %>
+  <p>Logged in as user: <%= @current_user.full_name %></p>
+<% end %>
+
+<h1>Create Your Account: </h1>
+
+<%= form_for(@user) do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name, placeholder: "First Name"%><br>
+
+
+
+
+
+<% end %><br>
+
+<%= button_to "Log Out", "/logout", method: "delete" %>
+
+
+<div class="row columns">
+  <h1>Create a new profile</h1>
+=======
 <!-------------------->
 <!-- Error Messages -->
 <!-------------------->
@@ -28,6 +57,7 @@
       </ul>
     </div>
   </div>
+
 </div>
 <% end %>
 
@@ -44,7 +74,7 @@
               <%= f.label "Show us your pearly whites" %>
               <%= f.text_field :picture_url, placeholder: "Upload Picture"%>
             </p>
-        
+
             <p>
               <%= f.label :first_name %>
               <%= f.text_field :first_name, placeholder: "First Name"%>

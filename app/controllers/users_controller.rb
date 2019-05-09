@@ -57,7 +57,7 @@ end
 def destroy
    @user = User.find(params[:id])
    @user.delete
-   redirect_to root_path 
+   redirect_to root_path
 end
 
 private
