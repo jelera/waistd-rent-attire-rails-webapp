@@ -29,5 +29,5 @@ Rails.application.routes.draw do
   delete '/outfits/:id/remove_from_my_outfits', to: 'outfits#remove_from_my_outfits', as: "remove_from_my_outfits"
 
   post '/products/search', to: 'products#search', as: "search"
-
+  post '/' => 'products#add_to_cart'
 end

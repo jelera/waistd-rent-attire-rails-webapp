@@ -11,5 +11,10 @@ class ProductsController < ApplicationController
   def search
     @results = Product.search(params[:query]).to_a
   end
-  
+
+  def add_to_cart
+    cart << params[:product]
+    # render :index
+  end
+
 end
