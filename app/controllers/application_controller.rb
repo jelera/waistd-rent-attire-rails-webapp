@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+
   def logged_in?
     !!current_user
   end
@@ -25,12 +27,14 @@ class ApplicationController < ActionController::Base
        cart = Cart.find_by(:id => session[:cart_id])
        if cart.present?
          @current_cart = cart
-       elsif
-         session[:cart_id] == nil
-         @current_cart = Cart.create(user_id: current_user[:id])
-         session[:cart_id] = @current_cart.id
+       else
+         session[:cart_id] = nil
+       end
+     end
+
+     unless session[:cart_id].nil?
+       @current_cart = Cart.create(user_id: current_user[:id])
+       session[:cart_id] = @current_cart.id
      end
    end
  end
- 
-end

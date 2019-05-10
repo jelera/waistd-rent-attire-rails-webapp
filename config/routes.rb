@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   post '/outfits/:id/add_to_my_outfits', to: 'outfits#add_to_my_outfits', as: "add_to_my_outfits"
   delete '/outfits/:id/remove_from_my_outfits', to: 'outfits#remove_from_my_outfits', as: "remove_from_my_outfits"
 
+  post '/products/search', to: 'products#search', as: "search"
 
 end
