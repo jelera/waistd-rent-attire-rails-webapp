@@ -5,89 +5,92 @@
 #
 # movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # Character.create(name: 'Luke', movie: movies.first)
+#
+# User.destroy_all
+# UserOutfit.destroy_all
+# Product.destroy_all
+# Outfit.destroy_all
+# OutfitProduct.destroy_all
+# Cart.destroy_all
+# CartProduct.destroy_all
+#
 
-User.destroy_all
-UserOutfit.destroy_all
-Product.destroy_all
-Outfit.destroy_all
-OutfitProduct.destroy_all
-Cart.destroy_all
-CartProduct.destroy_all
-#
-# user1 = User.create(
-#   first_name: "Sonia",
-#   last_name: "Dumitru",
-#   email: "sonia@gmail.com",
-#   password_digest: "waisted",
-#   birth_date: DateTime.new(1988, 9, 27),
-#   outfit_gender: "F",
-#   height: 66,
-#   preferred_style: "Casual",
-#   favorite_color: "grey",
-#   top_size: "S",
-#   bottom_size: "S",
-#   shoe_size: 8
-# )
-#
-# user2 = User.create(
-#   first_name: "Sarah",
-#   last_name: "Elzinga",
-#   email: "sarah@gmail.com",
-#   password_digest: "waisted",
-#   birth_date: DateTime.new(1985, 9, 24),
-#   outfit_gender: "F",
-#   height: 64,
-#   preferred_style: "Formal",
-#   favorite_color: "red",
-#   top_size: "M",
-#   bottom_size: "M",
-#   shoe_size: 9
-# )
-#
-# user3 = User.create(
-#   first_name: "Jose",
-#   last_name: "Elera",
-#   email: "jose@gmail.com",
-#   password_digest: "waisted",
-#   birth_date: DateTime.new(1985, 4, 24),
-#   outfit_gender: "M",
-#   height: 67,
-#   preferred_style: "Formal",
-#   favorite_color: "blue",
-#   top_size: "L",
-#   bottom_size: "L",
-#   shoe_size: 10
-# )
-#
-# user4 = User.create(
-#   first_name: "Diana",
-#   last_name: "Utan",
-#   email: "diana@gmail.com",
-#   password_digest: "waisted",
-#   birth_date: DateTime.new(1985, 8, 23),
-#   outfit_gender: "F",
-#   height: 62,
-#   preferred_style: "Casual",
-#   favorite_color: "black",
-#   top_size: "S",
-#   bottom_size: "S",
-#   shoe_size: 7
-# )
-#
-# user5 = User.create(
-#   first_name: "Rishi",
-#   last_name: "Tirumala",
-#   email: "rishi@gmail.com",
-#   password_digest: "waisted",
-#   birth_date: DateTime.new(1990, 5, 27),
-#   outfit_gender: "M",
-#   height: 67,
-#   preferred_style: "Formal",
-#   favorite_color: "pink",
-#   top_size: "L",
-#   bottom_size: "L",
-#   shoe_size: 11
-# )
+
+
+user1 = User.create(
+  first_name: "Sonia",
+  last_name: "Dumitru",
+  email: "sonia@gmail.com",
+  password_digest: "sonia",
+  birth_date: DateTime.new(1988, 9, 27),
+  outfit_gender: "F",
+  height: 66,
+  preferred_style: "Casual",
+  favorite_color: "grey",
+  top_size: "S",
+  bottom_size: "S",
+  shoe_size: 8
+)
+
+user2 = User.create(
+  first_name: "Sarah",
+  last_name: "Elzinga",
+  email: "sarah@gmail.com",
+  password_digest: "sarah",
+  birth_date: DateTime.new(1985, 9, 24),
+  outfit_gender: "F",
+  height: 64,
+  preferred_style: "Formal",
+  favorite_color: "red",
+  top_size: "M",
+  bottom_size: "M",
+  shoe_size: 9
+)
+
+user3 = User.create(
+  first_name: "Jose",
+  last_name: "Elera",
+  email: "jose@gmail.com",
+  password_digest: "jose",
+  birth_date: DateTime.new(1985, 4, 24),
+  outfit_gender: "M",
+  height: 67,
+  preferred_style: "Formal",
+  favorite_color: "blue",
+  top_size: "L",
+  bottom_size: "L",
+  shoe_size: 10
+)
+
+user4 = User.create(
+  first_name: "Diana",
+  last_name: "Utan",
+  email: "diana@gmail.com",
+  password_digest: "diana",
+  birth_date: DateTime.new(1985, 8, 23),
+  outfit_gender: "F",
+  height: 62,
+  preferred_style: "Casual",
+  favorite_color: "black",
+  top_size: "S",
+  bottom_size: "S",
+  shoe_size: 7
+)
+
+user5 = User.create(
+  first_name: "Rishi",
+  last_name: "Tirumala",
+  email: "rishi@gmail.com",
+  password_digest: "rishi",
+  birth_date: DateTime.new(1990, 5, 27),
+  outfit_gender: "M",
+  height: 67,
+  preferred_style: "Formal",
+  favorite_color: "pink",
+  top_size: "L",
+  bottom_size: "L",
+  shoe_size: 11
+ )
 
 casual_pant_w1 = Product.create(
               name: "HIGH-WAISTED BELTED PANTS",

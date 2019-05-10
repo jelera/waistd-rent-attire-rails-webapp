@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+<<<<<<< HEAD
+=======
+  before_action :current_user
+>>>>>>> feature/shoppingcart
   def index
    @orders = Order.all
  end
@@ -18,6 +22,10 @@ class OrdersController < ApplicationController
     product.cart_id = nil
     end
     @order.save
+<<<<<<< HEAD
+=======
+    p session[:cart_id]
+>>>>>>> feature/shoppingcart
     Cart.destroy(session[:cart_id])
     session[:cart_id] = nil
     redirect_to root_path

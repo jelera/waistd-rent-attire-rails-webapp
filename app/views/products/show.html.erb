@@ -124,7 +124,11 @@
             <p class="price">$<%= @product.price %></p>
             <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
             <button class="button expanded"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+<<<<<<< HEAD
             <% end %>
+=======
+            <h4><%= button_to "Add item to cart", cart_products_path(:product_id => @product.id) %></h4>
+>>>>>>> feature/shoppingcart
         </div>
         <p class="shipping">Available for Free Ground Shipping &amp; Return</p>
     </div>
