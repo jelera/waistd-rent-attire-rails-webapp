@@ -133,3 +133,43 @@
     </div>
 
 </div>
+<% unless @outfits.empty?  %>
+<!----------------------------------------------------------------->
+<!-- OUTFIT: PRODUCTS -->
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<div class="row">
+  <div class="row small-up-2 medium-up-3">
+
+    <% unless @outfits.length == 1  %>
+    <h3 id="outfit-product-cards">Featured in this outfit</h3>
+    <% else %>
+    <h3 id="outfit-product-cards">Featured in theses outfits</h3>
+    <% end %>
+  </div>
+</div>
+<div class="row small-up-2 medium-up-3">
+
+  <% @outfits.each do |outfit| %>
+  <!-- Card Element-->
+  <div class="column">
+    <a href="<%= outfit_path(outfit)  %>">
+      <div class="card" style="min-height: 500px;">
+        <img src="<%= outfit.picture_url %>">
+        <div class="card-section">
+          <h4><%= outfit.name.titleize %></h4>
+          <p>
+            <%= outfit.description %>
+          </p>
+          <p class='text-right'>
+            <strong>$<%= outfit.price %></strong>
+          </p>
+        </div>
+      </div>
+    </a>
+  </div><!-- end .column card-->
+
+  <% end %>
+
+</div>
+<% end %>

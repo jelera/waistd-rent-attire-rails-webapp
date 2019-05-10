@@ -1,10 +1,88 @@
-.promo-hero-bg-image {
-  // background-image: url(images/pages/suits_holding.jpg);
-  background-image: image-url("pages/stylish_couple.png");
-  height: 550px
+body {
+  font-size: 1.05rem;
+}
+.promo-hero {
+  height: 70vh;
 }
 
+.promo-hero-bg-image {
+  background: no-repeat center cover;
+  background-image: image-url("pages/stylish_couple.png");
+  background-attachment: fixed;
+
+
+  // height: 550px
+}
+
+.ecommerce-header .logo {
+  height: 100%;
+}
+.ecommerce-header show-for-large {
+  background-color: #434045; 
+}
+.ecommerce-header {
+  background-color: #434045 !important; 
+}
+
+.menu.medium-horizontal {
+
+  background-color: #434045 !important; 
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.marketing-site-features {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.featured-items {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: white;
+}
+
+.featured-testimonials-section {
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.signup-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: rgba(190, 192, 194, 0.658);
+
+}
+
+.promo-hero-description {
+  font-size: 1.5rem;
+}
+
+
+
+.featured-testimonials-section .profile-pic {
+  max-width: 200px;
+}
 .featured-items-brands img {
   height: 100px;
   width: 150px
+}
+
+.featured-items {
+  margin-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ecommerce-footer {
+  background-color: #434045 !important; 
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  a {
+    color: white;
+    font-weight: bold;
+  }
 }
