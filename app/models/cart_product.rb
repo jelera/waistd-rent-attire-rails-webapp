@@ -5,6 +5,8 @@ class CartProduct < ApplicationRecord
 
 
   def total_price
-    self.quantity * self.product.price
+    self.quantity * self.product.price_cents
   end
+
+
 end

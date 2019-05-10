@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :current_user
   def index
    @orders = Order.all
  end
@@ -18,6 +19,7 @@ class OrdersController < ApplicationController
     product.cart_id = nil
     end
     @order.save
+    p session[:cart_id]
     Cart.destroy(session[:cart_id])
     session[:cart_id] = nil
     redirect_to root_path

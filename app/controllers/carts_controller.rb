@@ -4,6 +4,8 @@ class CartsController < ApplicationController
    @cart = @current_cart
  end
 
+
+
  def destroy
    @cart = @current_cart
    @cart.destroy

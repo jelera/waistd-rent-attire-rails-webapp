@@ -46,6 +46,7 @@ class CartProductsController < ApplicationController
     redirect_to cart_path(@current_cart)
   end
 
+  
 private
   def cart_product_params
     params.require(:cart_product).permit(:quantity,:product_id, :cart_id, :order_id)
