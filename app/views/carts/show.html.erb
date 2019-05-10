@@ -23,3 +23,75 @@
 <h3>Sub total: <%= Cart.find(params[:id]).sub_total %></h3>
 <%= link_to "Proceed to checkout", new_order_path %><br>
 <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}%>
+
+
+<div class="row">
+  <div class="columns medium-10">
+  
+
+<table class="cart-table">
+    <caption>Shopping Cart</caption>
+    <!-- Table Head-->
+    <thead>
+        <tr>
+            <th colspan="2">Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+
+    <!-- Table Body-->
+    <tbody>
+        <% @cart.products each do |product| %>
+        <tr>
+            <td style="width: 100px;">
+                <img src="<%= product.picture_url%>" alt="">
+            </td>
+            <td>
+                <p class="prouct-title">
+                    <%= link_to product.name, product_path(product) %>
+                </p>
+                <p class="product-desc">
+                  <%= product.description %>
+                </p>
+            </td>
+            <td>
+                <strong>$<%= @product.price %></strong>
+            </td>
+            <td>
+                PRODUCT QUANTITY
+            </td>
+            <td>
+                PRODUCT.PRICE * QUANTITY in CART
+            </td>
+            <td>
+<a class="button alert" href="#"><i class="fas fa-trash-alt"></i></a>
+
+            </td>
+        </tr>
+        <% end %>
+
+    </tbody>
+
+    <!-- Table Footer-->
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <a href="#" class="button"><i class="fas fa-angle-double-left"></i> Continue Shopping</a>
+            </td>
+            <td>
+                <strong>Total: $1.99</strong>
+            </td>
+            <td>
+                <a href="#" class="success button">Checkout <i class="fas fa-angle-double-right"></i></a>
+
+            </td>
+        </tr>
+
+    </tfoot>
+</table>
+
+  </div>
+</div>
