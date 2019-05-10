@@ -21,6 +21,7 @@
   </div>
 </div>
 
+<% if logged_in? && current_user.id == @user.id %>
 <div class="row align-center">
   <div class="columns medium-8">
     <h1>My Profile</h1>
@@ -71,12 +72,23 @@
     </div>
   </div>
 </div>
+<% else %>
+<div class="row align-center">
+  <div class="columns medium-8">
+    <h1><%= @user.first_name%>'s Profile</h1>
+  </div>
+</div>
+<% end %>
 
 
 <% unless @user.outfits.empty? %>
 <div class="row">
   <div class="columns medium-10">
+  <% if logged_in? && current_user.id == @user.id %>
     <h2>My Outfits</h2>
+  <% else %>
+    <h2><%= @user.first_name%>'s Outfits</h2>
+  <% end %>
 
   </div>
 </div>

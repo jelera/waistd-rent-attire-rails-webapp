@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   # get '/my_profile', to: 'users#my_profile', as: 'my_profile'
   get '/login', to: 'sessions#new', as: 'login'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
+  post '/outfits/:id/add_to_my_outfits', to: 'outfits#add_to_my_outfits', as: "add_to_my_outfits"
+  delete '/outfits/:id/remove_from_my_outfits', to: 'outfits#remove_from_my_outfits', as: "remove_from_my_outfits"
+
 
 end

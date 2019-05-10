@@ -41,7 +41,7 @@
         <li><a href="#">Help</a></li>
         <li><a href="#">Order Status</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">My Account</a></li>
+        <li><a href="<%= current_user %>">My Account</a></li>
     </ul>
 
 </div>
@@ -51,16 +51,17 @@
     <div class="ecommerce-header-top show-for-large">
         <div class="row align-justify">
             <div class="ecommerce-header-top-message">
-                Where your dreams come true!
+                Get W/\ISTD. Get Hired.
             </div>
             <div class="ecommerce-header-top-links">
                 <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Order Status</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i>  Contact</a></li>
+                  <!-- commented out below until functional -->
+                    <!-- <li><a href="#">Help</a></li>
+                    <li><a href="#">Order Status</a></li> -->
+                    <!-- <li><a href="#"><i class="fas fa-envelope"></i>  Contact</a></li> -->
                     <li>
                         <% if logged_in? %>
-                        <a href="/my_profile">
+                        <a href="<%= user_path(current_user) %>">
                             <i class="fas fa-user"></i>  My Account
                         </a>
                         <% else %>
@@ -86,7 +87,10 @@
         <div class="row align-justify align-middle">
             <div class="shrink column">
                 <ul class="vertical medium-horizontal menu">
-                    <li><a href="/"><img class="logo" src="https://placehold.it/160x50"></a></li>
+                    <li><a href="/">
+                      <!-- <img class="logo" src="../../assets/waistd_logo.png"> -->
+                      <%= image_tag("waistd_logo.png", size: "100x100", alt: "logo") %>
+                    </a></li>
                     <li class="main-nav-link"><a href="<%= outfits_path %>">All our Outfits</a></li>
                     <li class="main-nav-link"><a href="<%= products_path%>">All our Products</a></li>
                     <li class="main-nav-link"><a href="why.html">Category 3</a></li>
