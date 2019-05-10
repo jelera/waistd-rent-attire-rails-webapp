@@ -100,9 +100,16 @@
             </div>
             <div class="shrink column">
                 <ul class="menu">
-                    <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button search-button"><i class="fas fa-search"></i>
-</button></li>
+                    <%= form_tag(search_path, method: :post) do %>
+                        <li>
+                        <%= text_field_tag 'query' %>
+                        </li>
+                        <li>
+                        <%= button_tag( :class => "button") do %>
+                            <i class="fas fa-search"></i>
+                        <% end %>
+                        </li>
+                    <% end %>
                 </ul>
             </div>
         </div>

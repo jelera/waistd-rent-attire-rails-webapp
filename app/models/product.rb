@@ -4,6 +4,8 @@ class Product < ApplicationRecord
   has_many :outfits, through: :outfit_products
   has_many :carts, through: :cart_products
 
+  scope :search, lambda { |query| where(["name LIKE ?", "%#{query}%"])}
+
 
   def self.find_male
     array = []
