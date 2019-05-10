@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def self.create_guest
-    email_prefix = (1..20000000).to_a.sample).to_s
+    email_prefix = (1..20000000).to_a.sample.to_s
     self.create(first_name: "GUEST #{Time.now}", last_name: 'USER', email: "#{email_prefix}" + "@gmail.com", birth_date: DateTime.new(1988, 9, 27))
   end
 
