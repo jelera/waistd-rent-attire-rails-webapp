@@ -52,13 +52,3 @@ class OutfitsController < ApplicationController
   end
 
 end
-
-# t.string "name"
-# t.string "description"
-# t.string "preferred_style"
-# t.string "picture_url"
-# t.string "outfit_gender"
-# t.integer "rating"
-# t.datetime "created_at", null: false
-# t.datetime "updated_at", null: false
-# end
