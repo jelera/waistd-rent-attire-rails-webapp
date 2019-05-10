@@ -16,5 +16,4 @@ class Cart < ApplicationRecord
     self.products.price_cents
   end
 
-
-  end
+end
